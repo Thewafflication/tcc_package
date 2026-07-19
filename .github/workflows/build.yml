@@ -69,12 +69,14 @@ jobs:
         arch: [x86, x64, arm64]
     env:
       WPM_PRIVATE_KEY: ${{ secrets.WPM_RELEASE_PRIVATE_KEY }}
-      WPM_DATA_DIR: ${{ runner.temp }}\wpm-data
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
+      - name: Use isolated WPM data directory
+        shell: pwsh
+        run: '"WPM_DATA_DIR=$env:RUNNER_TEMP\wpm-data" >> $env:GITHUB_ENV'
       - name: Validate manual release tag
         if: github.event_name == 'workflow_dispatch'
         shell: pwsh
