@@ -2,10 +2,8 @@ name: Build TinyCC WPM packages
 
 on:
   push:
-    branches:
-      - "**"
-    tags:
-      - "v*"
+    branches: ["**"]
+    tags: ["v*"]
   pull_request:
   workflow_dispatch:
     inputs:
@@ -14,93 +12,165 @@ on:
         required: true
         default: debug
         type: choice
-        options:
-          - debug
-          - release
+        options: [debug, release]
+      release_tag:
+        description: Tag to create for a manual release (for example, v0.9.28-1)
+        required: false
+        type: string
 
 permissions:
   contents: read
 
 jobs:
-  build:
-    name: ${{ matrix.arch }} ${{ (startsWith(github.ref, 'refs/tags/v') || inputs.flavor == 'release') && 'release' || 'debug' }}
+  debug:
+    if: ${{ !startsWith(github.ref, 'refs/tags/v') && !(github.event_name == 'workflow_dispatch' && inputs.flavor == 'release') }}
+    name: ${{ matrix.arch }} debug
     runs-on: windows-2022
     strategy:
       fail-fast: false
       matrix:
         arch: [x86, x64, arm64]
-    env:
-      FLAVOR: ${{ (startsWith(github.ref, 'refs/tags/v') || inputs.flavor == 'release') && 'release' || 'debug' }}
-      WPM_PRIVATE_KEY: ${{ secrets.WPM_SIGNING_PRIVATE_KEY }}
-
     steps:
-      - name: Check out sources and TinyCC
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           submodules: true
           fetch-depth: 0
-
       - name: Install WPM
         shell: pwsh
         run: |
           $installer = Join-Path $env:RUNNER_TEMP 'install-wpm.cmd'
-          Invoke-WebRequest -UseBasicParsing `
-            'https://github.com/Thewafflication/wpm/releases/latest/download/install.cmd' `
-            -OutFile $installer
+          Invoke-WebRequest -UseBasicParsing 'https://github.com/Thewafflication/wpm/releases/latest/download/install.cmd' -OutFile $installer
+          & $installer
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $wpmDirectory = Join-Path $env:ProgramFiles 'WPM'
+          if (-not (Test-Path (Join-Path $wpmDirectory 'wpm.exe') -PathType Leaf)) { throw 'WPM installation failed.' }
+          Add-Content -LiteralPath $env:GITHUB_PATH -Value $wpmDirectory
+      - name: Configure
+        shell: pwsh
+        run: cmake --preset "${{ matrix.arch }}-debug" -DWPM_SIGNING_KEY=
+      - name: Build WPM package
+        shell: pwsh
+        run: cmake --build --preset "${{ matrix.arch }}-debug"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tinycc-${{ matrix.arch }}-debug
+          path: out/packages/tinycc-${{ matrix.arch }}-debug-*.zip
+          if-no-files-found: error
+          compression-level: 0
+
+  release:
+    if: ${{ startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.flavor == 'release') }}
+    name: ${{ matrix.arch }} release
+    runs-on: windows-2022
+    environment: release
+    strategy:
+      fail-fast: false
+      matrix:
+        arch: [x86, x64, arm64]
+    env:
+      WPM_PRIVATE_KEY: ${{ secrets.WPM_RELEASE_PRIVATE_KEY }}
+      WPM_DATA_DIR: ${{ runner.temp }}\wpm-data
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Validate manual release tag
+        if: github.event_name == 'workflow_dispatch'
+        shell: pwsh
+        run: |
+          if ('${{ inputs.release_tag }}' -notmatch '^v[0-9].+$') { throw 'Manual releases require a release_tag beginning with v.' }
+      - name: Install WPM
+        shell: pwsh
+        run: |
+          $installer = Join-Path $env:RUNNER_TEMP 'install-wpm.cmd'
+          Invoke-WebRequest -UseBasicParsing 'https://github.com/Thewafflication/wpm/releases/latest/download/install.cmd' -OutFile $installer
           & $installer
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           $wpmDirectory = Join-Path $env:ProgramFiles 'WPM'
           $wpmExecutable = Join-Path $wpmDirectory 'wpm.exe'
-          if (-not (Test-Path -LiteralPath $wpmExecutable -PathType Leaf)) {
-            throw "WPM installer completed without creating $wpmExecutable"
-          }
+          if (-not (Test-Path -LiteralPath $wpmExecutable -PathType Leaf)) { throw 'WPM installation failed.' }
           Add-Content -LiteralPath $env:GITHUB_PATH -Value $wpmDirectory
           & $wpmExecutable --version
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-
-      - name: Prepare signing key
+      - name: Prepare release signing key
         id: signing
         shell: pwsh
         run: |
-          if ([string]::IsNullOrWhiteSpace($env:WPM_PRIVATE_KEY)) {
-            'cmake_arg=-DWPM_SIGNING_KEY=' >> $env:GITHUB_OUTPUT
-            'signed=false' >> $env:GITHUB_OUTPUT
-            Write-Host 'No signing secret is available; building an unsigned CI artifact.'
-          } else {
-            $keyPath = Join-Path $env:RUNNER_TEMP 'tinycc-package.private'
-            [IO.File]::WriteAllText($keyPath, $env:WPM_PRIVATE_KEY)
-            'cmake_arg=-DWPM_SIGNING_KEY=' + $keyPath >> $env:GITHUB_OUTPUT
-            'signed=true' >> $env:GITHUB_OUTPUT
-          }
-
-      - name: Require signing for tagged releases
-        if: startsWith(github.ref, 'refs/tags/v') && steps.signing.outputs.signed != 'true'
-        shell: pwsh
-        run: throw 'Tagged releases require the WPM_SIGNING_PRIVATE_KEY repository secret.'
-
+          if ([string]::IsNullOrWhiteSpace($env:WPM_PRIVATE_KEY)) { throw 'The release environment must define WPM_RELEASE_PRIVATE_KEY.' }
+          $keyPath = Join-Path $env:RUNNER_TEMP 'tinycc-release.private'
+          [IO.File]::WriteAllText($keyPath, $env:WPM_PRIVATE_KEY)
+          'cmake_arg=-DWPM_SIGNING_KEY=' + $keyPath >> $env:GITHUB_OUTPUT
       - name: Configure
         shell: pwsh
-        run: cmake --preset "${{ matrix.arch }}-$env:FLAVOR" "${{ steps.signing.outputs.cmake_arg }}"
-
-      - name: Build WPM package
+        run: cmake --preset "${{ matrix.arch }}-release" "${{ steps.signing.outputs.cmake_arg }}"
+      - name: Build signed WPM package
         shell: pwsh
-        run: cmake --build --preset "${{ matrix.arch }}-$env:FLAVOR"
-
-      - name: Verify signed package
-        if: steps.signing.outputs.signed == 'true'
+        run: cmake --build --preset "${{ matrix.arch }}-release"
+      - name: Trust release public key and verify package
         shell: pwsh
         run: |
-          $package = Get-ChildItem out/packages/tinycc-${{ matrix.arch }}-*.zip -File
-          if ($package.Count -ne 1) { throw "Expected one package, found $($package.Count)." }
-          # The runner is ephemeral and this package was signed moments ago
-          # with the injected key, so trust its embedded public key for verification.
-          'y' | & 'C:\Program Files\WPM\wpm.exe' verify $package.FullName
+          wpm trust add release_keys/wpm-release.public
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-
-      - name: Upload package
-        uses: actions/upload-artifact@v4
+          $package = @(Get-ChildItem out/packages/tinycc-${{ matrix.arch }}-*.zip -File)
+          if ($package.Count -ne 1) { throw "Expected one package, found $($package.Count)." }
+          wpm verify $package[0].FullName
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Remove private key
+        if: always()
+        shell: pwsh
+        run: Remove-Item (Join-Path $env:RUNNER_TEMP 'tinycc-release.private') -Force -ErrorAction SilentlyContinue
+      - uses: actions/upload-artifact@v4
         with:
-          name: tinycc-${{ matrix.arch }}-${{ env.FLAVOR }}
+          name: tinycc-${{ matrix.arch }}-release
           path: out/packages/tinycc-${{ matrix.arch }}-*.zip
           if-no-files-found: error
           compression-level: 0
+
+  publish:
+    if: ${{ startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.flavor == 'release') }}
+    name: Publish GitHub release
+    needs: release
+    runs-on: windows-2022
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: tinycc-*-release
+          path: release-assets
+          merge-multiple: true
+      - name: Create WPM repository index
+        id: metadata
+        shell: pwsh
+        run: |
+          $tag = if ('${{ github.event_name }}' -eq 'workflow_dispatch') { '${{ inputs.release_tag }}' } else { '${{ github.ref_name }}' }
+          if ($tag -notmatch '^v[0-9].+$') { throw "Invalid release tag: $tag" }
+          $assets = (Resolve-Path release-assets).Path
+          Copy-Item release_keys/wpm-release.public (Join-Path $assets 'wpm-release.public')
+          $packages = foreach ($file in Get-ChildItem $assets -Filter 'tinycc-*.zip' -File) {
+            if ($file.Name -notmatch '^tinycc-(x86|x64|arm64)-(.+)\.zip$') { throw "Unexpected package filename: $($file.Name)" }
+            [ordered]@{
+              name = 'tinycc'
+              version = $Matches[2]
+              arch = $Matches[1]
+              url = "https://github.com/${{ github.repository }}/releases/download/$tag/$($file.Name)"
+            }
+          }
+          if (@($packages).Count -ne 3) { throw 'Expected exactly three release packages.' }
+          [ordered]@{ version = 1; packages = @($packages) } | ConvertTo-Json -Depth 4 | Set-Content (Join-Path $assets 'index.json') -Encoding utf8NoBOM
+          "tag=$tag" >> $env:GITHUB_OUTPUT
+      - name: Create release and upload assets
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = '${{ steps.metadata.outputs.tag }}'
+          gh release view $tag --repo '${{ github.repository }}' *> $null
+          if ($LASTEXITCODE -ne 0) {
+            gh release create $tag --repo '${{ github.repository }}' --target '${{ github.sha }}' --generate-notes --title $tag
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+          $assets = @(Get-ChildItem release-assets -File | Where-Object { $_.Name -eq 'index.json' -or $_.Name -eq 'wpm-release.public' -or $_.Name -like 'tinycc-*.zip' })
+          gh release upload $tag --repo '${{ github.repository }}' --clobber @($assets.FullName)
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

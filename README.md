@@ -48,8 +48,13 @@ coexist. `TCC_HOME` points to the most recently installed version; no ambiguous
 `%ProgramData%\WPM\wpm-release.private` by default; override `WPM_SIGNING_KEY`
 when configuring if a different key is required.
 
-GitHub Actions builds `*-debug` WPM archives for branch pushes and pull
-requests, and release archives for tags matching `v*`. Configure the
-`WPM_SIGNING_PRIVATE_KEY` repository secret with the contents of the WPM
-private key. Debug CI artifacts may be unsigned when secrets are unavailable;
-tagged release builds require the signing secret.
+GitHub Actions builds unsigned `*-debug` WPM archives for branch pushes and
+pull requests. Release builds use the protected GitHub `release` environment
+and require its `WPM_RELEASE_PRIVATE_KEY` secret. The private key exists only
+in the runner's temporary directory while the package is built. Signed
+packages are verified against `release_keys/wpm-release.public`.
+
+Pushing a `v*` tag publishes all three Release packages, the public key, and a
+WPM version 1 `index.json` to the corresponding GitHub Release. You can also
+run the workflow manually with `flavor=release` and a new `release_tag`; the
+workflow creates the tag and release at the selected commit.
