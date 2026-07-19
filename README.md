@@ -15,6 +15,26 @@ Every package also contains `i386-win32-tcc.exe`, `x86_64-win32-tcc.exe`, and
 host architecture and emit/link complete Windows programs for their named
 target using the included prefixed runtime libraries.
 
+## Install with WPM
+
+From an elevated PowerShell session, add the GitHub latest-release assets as a
+WPM repository, refresh the package index, and install the package selected for
+the current Windows architecture:
+
+```powershell
+wpm repo add https://github.com/Thewafflication/tcc_package/releases/latest/download
+wpm update
+wpm install tinycc
+```
+
+Before the first installation, download and trust the published release key if
+it is not already present in the machine trust store:
+
+```powershell
+Invoke-WebRequest https://github.com/Thewafflication/tcc_package/releases/latest/download/wpm-release.public -OutFile wpm-release.public
+wpm trust add wpm-release.public
+```
+
 ## Prerequisites
 
 - CMake 3.21 or newer and Ninja

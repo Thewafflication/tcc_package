@@ -14,7 +14,7 @@ on:
         type: choice
         options: [debug, release]
       release_tag:
-        description: Tag to create for a manual release (for example, v0.9.28-1)
+        description: Release version or tag (for example, 0.9.28-1 or v0.9.28-1)
         required: false
         type: string
 
@@ -81,7 +81,9 @@ jobs:
         if: github.event_name == 'workflow_dispatch'
         shell: pwsh
         run: |
-          if ('${{ inputs.release_tag }}' -notmatch '^v[0-9].+$') { throw 'Manual releases require a release_tag beginning with v.' }
+          if ('${{ inputs.release_tag }}' -notmatch '^v?[0-9][0-9A-Za-z.+-]*$') {
+            throw 'Manual releases require a version such as 0.9.28-1 or v0.9.28-1.'
+          }
       - name: Install WPM
         shell: pwsh
         run: |
@@ -147,7 +149,8 @@ jobs:
         shell: pwsh
         run: |
           $tag = if ('${{ github.event_name }}' -eq 'workflow_dispatch') { '${{ inputs.release_tag }}' } else { '${{ github.ref_name }}' }
-          if ($tag -notmatch '^v[0-9].+$') { throw "Invalid release tag: $tag" }
+          if ($tag -notmatch '^v') { $tag = "v$tag" }
+          if ($tag -notmatch '^v[0-9][0-9A-Za-z.+-]*$') { throw "Invalid release tag: $tag" }
           $assets = (Resolve-Path release-assets).Path
           Copy-Item release_keys/wpm-release.public (Join-Path $assets 'wpm-release.public')
           $packages = foreach ($file in Get-ChildItem $assets -Filter 'tinycc-*.zip' -File) {
