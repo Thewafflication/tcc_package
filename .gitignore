@@ -1,0 +1,34 @@
+# CMake and generated packages
+/out/
+/build/
+/cmake-build-*/
+/CMakeUserPresets.json
+/install_manifest.txt
+
+# Visual Studio and editors
+/.vs/
+/.vscode/
+/.idea/
+*.user
+*.suo
+*.VC.db
+*.VC.opendb
+
+# Build products and diagnostics accidentally emitted at the repository root
+/*.obj
+/*.o
+/*.pdb
+/*.ilk
+/*.exp
+/*.lib
+/*.dll
+/*.exe
+/*.zip
+/*.log
+/*.tmp
+/.cache/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
