@@ -34,7 +34,7 @@
     {
       "name": "x86-debug",
       "inherits": "debug-base",
-      "cacheVariables": { "TCC_TARGET": "x86", "TCC_TOOLCHAIN": "mingw" }
+      "cacheVariables": { "TCC_TARGET": "x86", "TCC_TOOLCHAIN": "tcc-bootstrap" }
     },
     {
       "name": "x64-debug",
@@ -49,7 +49,7 @@
     {
       "name": "x86-release",
       "inherits": "release-base",
-      "cacheVariables": { "TCC_TARGET": "x86", "TCC_TOOLCHAIN": "mingw" }
+      "cacheVariables": { "TCC_TARGET": "x86", "TCC_TOOLCHAIN": "tcc-bootstrap" }
     },
     {
       "name": "x64-release",

@@ -40,19 +40,6 @@ jobs:
           submodules: true
           fetch-depth: 0
 
-      - name: Install 32-bit MinGW
-        if: matrix.arch == 'x86'
-        uses: msys2/setup-msys2@v2
-        with:
-          msystem: MINGW32
-          update: true
-          install: mingw-w64-i686-gcc
-
-      - name: Add MinGW to PATH
-        if: matrix.arch == 'x86'
-        shell: pwsh
-        run: Add-Content -LiteralPath $env:GITHUB_PATH -Value 'C:\msys64\mingw32\bin'
-
       - name: Install WPM
         shell: pwsh
         run: |
@@ -61,6 +48,14 @@ jobs:
             'https://github.com/Thewafflication/wpm/releases/latest/download/install.cmd' `
             -OutFile $installer
           & $installer
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $wpmDirectory = Join-Path $env:ProgramFiles 'WPM'
+          $wpmExecutable = Join-Path $wpmDirectory 'wpm.exe'
+          if (-not (Test-Path -LiteralPath $wpmExecutable -PathType Leaf)) {
+            throw "WPM installer completed without creating $wpmExecutable"
+          }
+          Add-Content -LiteralPath $env:GITHUB_PATH -Value $wpmDirectory
+          & $wpmExecutable --version
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Prepare signing key

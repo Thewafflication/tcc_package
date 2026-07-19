@@ -4,18 +4,21 @@ This wrapper builds three isolated TinyCC packages from the `tinycc` submodule:
 
 | Preset | Host compiler | TinyCC output target | Compatibility |
 |---|---|---|---|
-| `x86-winxp-mingw` | 32-bit MinGW GCC | i386 PE | Windows XP (5.1) |
+| `x86-debug` / `x86-release` | x64 TinyCC bootstrap | native i386 PE | Windows XP and newer |
 | `x64-msvc` | MSVC | x86-64 PE | 64-bit Windows |
 | `arm64-msvc` | MSVC | ARM64 PE | Windows on ARM |
 
 The x64 and ARM64 packages contain x64-hosted TinyCC executables. The ARM64
 package's `tcc.exe` emits ARM64 code; it does not itself run natively on ARM64.
+Every package also contains `i386-win32-tcc.exe`, `x86_64-win32-tcc.exe`, and
+`arm64-win32-tcc.exe`. These explicitly named compilers run on the package's
+host architecture and emit/link complete Windows programs for their named
+target using the included prefixed runtime libraries.
 
 ## Prerequisites
 
 - CMake 3.21 or newer and Ninja
 - Visual Studio 2022 or newer with the MSVC x64 tools
-- A 32-bit MinGW-w64 GCC (`i686-w64-mingw32-gcc`) on `PATH` for the XP build
 
 ## Build
 
@@ -31,9 +34,10 @@ cmake --build --preset arm64-release
 ```
 
 Each completed package is written beneath `out/build/<preset>/package`.
-The MinGW package is statically linked, defines the Windows XP API baseline,
-and requests PE subsystem version 5.1. TinyCC's own i386 PE backend uses an
-even older 4.0 OS/subsystem baseline for programs it generates.
+The x86 build first uses MSVC to create an x64-hosted i386 cross-compiler,
+then uses that cross-compiler to build the final native i386 TinyCC package.
+TinyCC's i386 PE backend declares a Windows 4.0 OS/subsystem baseline, which
+remains compatible with Windows XP and modern Windows through WOW64.
 
 Each build also creates a signed WPM archive in `out/packages`. Its version
 and metadata are derived from the TinyCC submodule's Git state, `VERSION`,
