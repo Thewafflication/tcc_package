@@ -15,6 +15,30 @@ Every package also contains `i386-win32-tcc.exe`, `x86_64-win32-tcc.exe`, and
 host architecture and emit/link complete Windows programs for their named
 target using the included prefixed runtime libraries.
 
+### Compiler executables
+
+The architecture in a compiler's filename describes the Windows programs it
+*generates*, not necessarily the architecture of the compiler executable
+itself.
+
+| Executable | Generated program | Purpose |
+|---|---|---|
+| `tcc.exe` | Matches the WPM package: x86, x64, or ARM64 | Conventional/default TinyCC command for that package. Use this when compiling for the package's primary target. |
+| `i386-win32-tcc.exe` | 32-bit x86 Windows PE | Explicit x86 cross-compiler. It uses the included `i386-win32-*` runtime files. |
+| `x86_64-win32-tcc.exe` | 64-bit x86 Windows PE | Explicit x64 cross-compiler. It uses the included `x86_64-win32-*` runtime files. |
+| `arm64-win32-tcc.exe` | 64-bit ARM Windows PE | Explicit ARM64 cross-compiler. It uses the included `arm64-win32-*` runtime files. |
+
+Consequently, one named compiler overlaps with `tcc.exe` in each package. For
+example, the x64 package's `tcc.exe` and `x86_64-win32-tcc.exe` both generate
+x64 programs. The named form makes the requested output architecture explicit
+and lets build scripts use the same command names with every package.
+
+| WPM package | Compiler executable host | `tcc.exe` output |
+|---|---|---|
+| `tinycc-x86-*` | Native x86 | x86 |
+| `tinycc-x64-*` | Native x64 | x64 |
+| `tinycc-arm64-*` | x64 (runs under Windows ARM64 x64 emulation) | ARM64 |
+
 ## Install with WPM
 
 From an elevated PowerShell session, add the GitHub latest-release assets as a
