@@ -50,3 +50,15 @@ CX1 does not implement `_Imaginary`, a complete Windows complex math library,
 or IEC 60559 Annex G behavior. ARM64 execution was unavailable on this host,
 so the closeout claims cross-compilation and ABI inspection only for that
 target. These boundaries remain CX2 work and are not silent fallbacks.
+
+## Post-release Correction — rc.1442
+
+TinyCC commit `2474e1c2` corrects the Windows double-width-long-double usual
+arithmetic conversions recorded as `CX1-F-0010`. `TC-0003` now verifies with
+`_Generic` that arithmetic and conditional expressions involving `long double`
+retain long-double type identity.
+
+The correction passed all 15 CTest groups on Windows x86, x64, and ARM64; the
+native Linux conversion probe; GCC oracle compilation; the full upstream Linux
+suite; and the pinned 68-object musl complex build. It is allocated to release
+`v0.9.28-rc.1442+2474e1c2`.

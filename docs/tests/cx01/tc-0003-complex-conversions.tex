@@ -5,25 +5,28 @@
 \def\TCID{TCC-CX-TC-0003}
 \def\TCTitle{Real and complex conversions}
 \def\TCPurpose{Verify implicit and explicit conversions between supported
-real, integer, and complex types.}
+real, integer, and complex types, including the common real type selected by
+the usual arithmetic conversions.}
 \def\TCPriority{\TCPriorityHigh}
-\def\TCRequirementRef{TCC-CX-REQ-0004}
+\def\TCRequirementRef{TCC-CX-REQ-0004; TCC-CX-REQ-0005}
 \def\TCDesignRef{CX1 design: Cast and assignment conversion matrix}
-\def\TCFeatureRef{Casts, assignment conversion, argument conversion, and
-return conversion}
+\def\TCFeatureRef{Casts, assignment conversion, argument conversion, return
+conversion, and usual arithmetic conversions}
 \def\TCTestTechnique{Pairwise conversion matrix and boundary-value testing.}
 \def\TCPreconditions{The three required complex types are accepted.}
 \def\TCEnvironment{Every executable CX1 target configuration.}
-\def\TCAssumptions{Scalar conversion behavior is covered by the existing TinyCC suite.}
+\def\TCAssumptions{The target may use double-width storage for long double,
+but its C type identity remains distinct.}
 \def\TCInputData{Zero, signed zero, finite boundaries, infinities, NaNs, and
 values with nonzero imaginary components.}
 \def\TCInitialState{Source values are initialized from volatile scalar components.}
 \def\TCProcedure{Convert every required source and destination domain through
 casts, assignments, calls, and returns; compare components with an oracle
-compiler.}
+compiler; use \texttt{\_Generic} to verify the common real type.}
 \def\TCExpectedResult{Conversions follow the C domain rules, discard or
 introduce the imaginary component only where specified, and evaluate sources
-once.}
+once. Expressions mixing float, double, integer, and long double retain the
+required long-double result type.}
 \def\TCPostConditions{Per-target oracle comparisons are preserved.}
 \TCTemplate
 \end{document}
