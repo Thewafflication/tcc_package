@@ -1,0 +1,32 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\input{wsp/testing/test-case-library.tex}
+\begin{document}
+\def\TCID{TCC-CX-TC-0002}
+\def\TCTitle{Complex constants, objects, initialization, and storage}
+\def\TCPurpose{Verify construction and lifetime of complex values without
+repeated side effects.}
+\def\TCPriority{\TCPriorityHigh}
+\def\TCRequirementRef{TCC-CX-REQ-0003, TCC-CX-REQ-0006}
+\def\TCDesignRef{CX1 design: Value construction and storage}
+\def\TCFeatureRef{Imaginary suffixes, \_Complex\_I,
+\_\_builtin\_complex, initialization, assignment, and return}
+\def\TCTestTechnique{Compile-time, runtime, and side-effect-count testing.}
+\def\TCPreconditions{The compiler supplies the CX1 complex construction
+surface.}
+\def\TCEnvironment{Every executable CX1 target; compile-only on ARM64 when no
+runner exists.}
+\def\TCAssumptions{Signed zero and non-finite scalar constants are available
+on the host.}
+\def\TCInputData{Automatic, static, aggregate-member, array, compound-literal,
+and function-result values.}
+\def\TCInitialState{Counters are zero and destination objects contain sentinel values.}
+\def\TCProcedure{Compile and execute construction, initialization, copy,
+assignment, address, and function-result cases; inspect static data where
+execution is unavailable.}
+\def\TCExpectedResult{Both components retain their values and signs, each
+operand is evaluated once, and object operations preserve the canonical
+representation.}
+\def\TCPostConditions{Counters and object bytes are captured in the result log.}
+\TCTemplate
+\end{document}

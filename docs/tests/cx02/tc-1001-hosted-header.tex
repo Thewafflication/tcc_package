@@ -1,0 +1,12 @@
+\documentclass{article}
+\begin{document}
+\section*{TC-1001 Hosted complex header}
+\textbf{Requirements:} TCC-CX-REQ-1001.
+
+Compile and link a strict C11 translation unit that includes
+\texttt{<complex.h>}, checks the required macros and their types, verifies the
+intentional absence of imaginary-type macros, and takes or invokes every C99
+complex function in float, double, and long-double precision. Pass requires
+successful native execution or, for ARM64, successful compile and link-object
+inspection.
+\end{document}

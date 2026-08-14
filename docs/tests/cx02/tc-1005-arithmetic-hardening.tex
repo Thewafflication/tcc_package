@@ -1,0 +1,11 @@
+\documentclass{article}
+\begin{document}
+\section*{TC-1005 Complex arithmetic range hardening}
+\textbf{Requirements:} TCC-CX-REQ-1005.
+
+Test multiplication and division with maximum finite, minimum normal,
+subnormal, zero, infinity, and NaN components. Include cases where textbook
+intermediates overflow but the mathematical result is finite, and verify each
+operand side effect occurs once. Pass requires recovered classifications and
+finite reference results.
+\end{document}

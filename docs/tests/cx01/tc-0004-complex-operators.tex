@@ -1,0 +1,28 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\input{wsp/testing/test-case-library.tex}
+\begin{document}
+\def\TCID{TCC-CX-TC-0004}
+\def\TCTitle{Complex operators and scalar contexts}
+\def\TCPurpose{Verify complex arithmetic, equality, conditional behavior, and
+diagnostics.}
+\def\TCPriority{\TCPriorityHigh}
+\def\TCRequirementRef{TCC-CX-REQ-0005}
+\def\TCDesignRef{CX1 design: Expression lowering and semantic-rvalue rules}
+\def\TCFeatureRef{Unary operators, arithmetic, equality, truth testing,
+conditional expressions, and compound assignment}
+\def\TCTestTechnique{Operator matrix, algebraic oracle, and negative testing.}
+\def\TCPreconditions{Complex value construction and conversion tests pass.}
+\def\TCEnvironment{Every executable CX1 target configuration.}
+\def\TCAssumptions{Annex G exceptional-value conformance is outside CX1.}
+\def\TCInputData{Mixed real and complex operands, side-effecting operands,
+zero components, finite values, and forbidden relational operators.}
+\def\TCInitialState{Side-effect counters are zero.}
+\def\TCProcedure{Exercise each required operator and scalar context; compare
+finite results to an oracle and compile the controlled rejection cases.}
+\def\TCExpectedResult{Required results and truth values are correct, operands
+execute once, temporary results are not addressable, and forbidden operators
+are diagnosed.}
+\def\TCPostConditions{Runtime values, counts, and diagnostics are recorded.}
+\TCTemplate
+\end{document}

@@ -1,0 +1,33 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\input{wsp/testing/test-case-library.tex}
+\begin{document}
+\def\TCID{TCC-CX-TC-0007}
+\def\TCTitle{Complex feature regression and packaging matrix}
+\def\TCPurpose{Verify that CX1 does not regress existing compiler or package
+behavior.}
+\def\TCPriority{\TCPriorityHigh}
+\def\TCRequirementRef{TCC-CX-REQ-0009}
+\def\TCDesignRef{CX1 design: Integration and verification boundaries}
+\def\TCFeatureRef{TinyCC regression suites, package builds, install layout,
+and controlled complex tests}
+\def\TCTestTechnique{Regression, build-matrix, installation, and
+failure-propagation testing.}
+\def\TCPreconditions{All CX1 implementation slices have passed focused review.}
+\def\TCEnvironment{Windows x86, x64, and ARM64 package presets plus Linux
+x86-64.}
+\def\TCAssumptions{Windows ARM64 execution is not claimed without an available runner.}
+\def\TCInputData{Upstream TinyCC tests, package build presets, and
+TCC-CX-TC-0001 through TCC-CX-TC-0006.}
+\def\TCInitialState{Clean per-configuration build directories and a recorded
+toolchain inventory.}
+\def\TCProcedure{Configure and build each controlled target, run every
+available upstream and CX1 test, inspect non-runnable objects, and force one
+known failing test to verify dispatcher propagation.}
+\def\TCExpectedResult{All applicable tests pass, skipped execution is
+explicitly qualified, package contents remain valid, and the dispatcher never
+reports a failing child as Pass.}
+\def\TCPostConditions{CTest metadata, logs, rerun commands, and package
+manifests are preserved.}
+\TCTemplate
+\end{document}

@@ -1,0 +1,31 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\input{wsp/testing/test-case-library.tex}
+\begin{document}
+\def\TCID{TCC-CX-TC-0001}
+\def\TCTitle{Complex type specifiers, identity, size, and alignment}
+\def\TCPurpose{Verify the required complex types and their object
+representation.}
+\def\TCPriority{\TCPriorityHigh}
+\def\TCRequirementRef{TCC-CX-REQ-0001, TCC-CX-REQ-0002,
+TCC-CX-REQ-0008}
+\def\TCDesignRef{CX1 design: Type model and canonical representation}
+\def\TCFeatureRef{float, double, and long double complex types}
+\def\TCTestTechnique{Syntax, compile-time assertion, and representation
+testing.}
+\def\TCPreconditions{The CX1 compiler and target C runtime are built.}
+\def\TCEnvironment{Every controlled CX1 target configuration.}
+\def\TCAssumptions{The target real types satisfy the existing TinyCC
+contract.}
+\def\TCInputData{All valid specifier orders, typedefs, qualifiers, arrays,
+pointers, and invalid combinations.}
+\def\TCInitialState{A clean test build directory.}
+\def\TCProcedure{Compile positive and negative translation units; run size,
+alignment, and two-component layout assertions where execution is supported.}
+\def\TCExpectedResult{Valid declarations have distinct complex type identity
+and the required layout with two real components; invalid combinations receive
+stable diagnostics.}
+\def\TCPostConditions{All generated objects and diagnostics are preserved as
+test evidence.}
+\TCTemplate
+\end{document}

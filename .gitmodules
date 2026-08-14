@@ -1,3 +1,6 @@
 [submodule "tinycc"]
 	path = tinycc
-	url = https://repo.or.cz/tinycc.git
+	url = https://github.com/Thewafflication/tinycc.git
+[submodule "wsp"]
+	path = wsp
+	url = https://github.com/Thewafflication/wsp

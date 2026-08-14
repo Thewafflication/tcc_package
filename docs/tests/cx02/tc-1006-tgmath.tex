@@ -1,0 +1,10 @@
+\documentclass{article}
+\begin{document}
+\section*{TC-1006 Type-generic complex math}
+\textbf{Requirements:} TCC-CX-REQ-1006.
+
+Use \texttt{<tgmath.h>} with every complex precision, real controls, mixed
+power arguments, and \texttt{fabs}. Verify selected expression types with
+\texttt{\_Generic} and runtime values. Pass requires complex dispatch without
+discarding imaginary components and unchanged real dispatch.
+\end{document}
