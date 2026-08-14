@@ -1,0 +1,33 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\input{wsp/testing/test-case-library.tex}
+\begin{document}
+\def\TCID{TCC-CX-TC-0006}
+\def\TCTitle{Hosted complex header compatibility}
+\def\TCPurpose{Verify that TinyCC can consume the selected musl complex header
+and representative interfaces.}
+\def\TCPriority{\TCPriorityHigh}
+\def\TCRequirementRef{TCC-CX-REQ-0010}
+\def\TCDesignRef{CX1 design: Header compatibility surface}
+\def\TCFeatureRef{complex, \_Complex\_I, I, CMPLX macros, declarations, and
+representative calls}
+\def\TCTestTechnique{Header conformance, compile-only API coverage, and
+representative integration testing.}
+\def\TCPreconditions{The pinned musl header fixture and Linux complex math
+library are available.}
+\def\TCEnvironment{Linux x86-64 WSL; compile-only compatibility checks on
+packaged targets.}
+\def\TCAssumptions{Implementing the complete Windows complex math library is
+a CX2 objective.}
+\def\TCInputData{The pinned musl complex header plus small translation units
+covering its macros, declarations, and function types.}
+\def\TCInitialState{No local compatibility substitutions are injected into the fixture.}
+\def\TCProcedure{Preprocess and compile the header fixture, compile macro and
+declaration probes, then link and execute representative library calls on
+Linux.}
+\def\TCExpectedResult{The unmodified fixture compiles without the former
+unsupported-type diagnostic and representative calls preserve both
+components.}
+\def\TCPostConditions{The fixture revision and all compiler output are recorded.}
+\TCTemplate
+\end{document}

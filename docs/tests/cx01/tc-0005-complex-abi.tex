@@ -1,0 +1,33 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper,margin=1in]{geometry}
+\input{wsp/testing/test-case-library.tex}
+\begin{document}
+\def\TCID{TCC-CX-TC-0005}
+\def\TCTitle{Complex ABI interoperability}
+\def\TCPurpose{Verify parameter, return, aggregate, and variadic
+interoperability with the platform ABI.}
+\def\TCPriority{\TCPriorityHigh}
+\def\TCRequirementRef{TCC-CX-REQ-0007}
+\def\TCDesignRef{CX1 design: Target ABI classification}
+\def\TCFeatureRef{Direct and indirect calls, callbacks, returns, structs,
+unions, and variadic arguments}
+\def\TCTestTechnique{Bidirectional differential linking and object-code
+inspection.}
+\def\TCPreconditions{TinyCC and an independent platform compiler can produce
+link-compatible objects.}
+\def\TCEnvironment{Windows x86 and x64; Linux x86-64; Windows ARM64 compile
+and object inspection.}
+\def\TCAssumptions{The independent compiler implements the documented
+platform ABI.}
+\def\TCInputData{All three complex precisions in scalar, aggregate, callback,
+return, and variadic positions.}
+\def\TCInitialState{One caller and callee are generated for each compiler direction.}
+\def\TCProcedure{Compile callers and callees with opposite compilers, link
+both directions, execute where supported, and inspect ARM64 classification and
+return sequences.}
+\def\TCExpectedResult{Components arrive in the ABI-defined locations with
+correct size, alignment, register or stack class, and variadic traversal.}
+\def\TCPostConditions{Binaries, disassembly, symbol data, and execution logs
+are retained.}
+\TCTemplate
+\end{document}

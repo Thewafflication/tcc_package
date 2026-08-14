@@ -1,0 +1,11 @@
+\documentclass{article}
+\begin{document}
+\section*{TC-1008 CX2 integration and regression}
+\textbf{Requirements:} TCC-CX-REQ-1008.
+
+Run CX1 and CX2 CTest groups on Windows x86, x64, and ARM64 in their applicable
+modes. On Linux x86-64 rebuild final sources, run the controlled arithmetic
+checks, pinned musl complex build/header test, and upstream TinyCC suite. Pass
+requires every applicable gate and records unavailable native ARM64 execution
+as not run rather than pass.
+\end{document}
