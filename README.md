@@ -100,5 +100,5 @@ packages are verified against `release_keys/wpm-release.public`.
 
 Pushing a `v*` tag publishes all three Release packages, the public key, and a
 WPM version 1 `index.json` to the corresponding GitHub Release. You can also
-run the workflow manually with `flavor=release` and a new `release_tag`; the
-workflow creates the tag and release at the selected commit.
+run the workflow manually with `flavor=release`; the workflow derives the tag
+from the package version and creates the tag and release at the selected commit.

@@ -13,10 +13,6 @@ on:
         default: debug
         type: choice
         options: [debug, release]
-      release_tag:
-        description: Release version or tag (for example, 0.9.28-1 or v0.9.28-1)
-        required: false
-        type: string
 
 permissions:
   contents: read
@@ -77,13 +73,6 @@ jobs:
       - name: Use isolated WPM data directory
         shell: pwsh
         run: '"WPM_DATA_DIR=$env:RUNNER_TEMP\wpm-data" >> $env:GITHUB_ENV'
-      - name: Validate manual release tag
-        if: github.event_name == 'workflow_dispatch'
-        shell: pwsh
-        run: |
-          if ('${{ inputs.release_tag }}' -notmatch '^v?[0-9][0-9A-Za-z.+-]*$') {
-            throw 'Manual releases require a version such as 0.9.28-1 or v0.9.28-1.'
-          }
       - name: Install WPM
         shell: pwsh
         run: |
@@ -144,13 +133,10 @@ jobs:
           pattern: tinycc-*-release
           path: release-assets
           merge-multiple: true
-      - name: Create WPM repository index
+      - name: Derive release tag and create WPM repository index
         id: metadata
         shell: pwsh
         run: |
-          $tag = if ('${{ github.event_name }}' -eq 'workflow_dispatch') { '${{ inputs.release_tag }}' } else { '${{ github.ref_name }}' }
-          if ($tag -notmatch '^v') { $tag = "v$tag" }
-          if ($tag -notmatch '^v[0-9][0-9A-Za-z.+-]*$') { throw "Invalid release tag: $tag" }
           $assets = (Resolve-Path release-assets).Path
           Copy-Item release_keys/wpm-release.public (Join-Path $assets 'wpm-release.public')
           $packages = foreach ($file in Get-ChildItem $assets -Filter 'tinycc-*.zip' -File) {
@@ -159,10 +145,20 @@ jobs:
               name = 'tinycc'
               version = $Matches[2]
               arch = $Matches[1]
-              url = "https://github.com/${{ github.repository }}/releases/download/$tag/$($file.Name)"
+              file = $file.Name
             }
           }
           if (@($packages).Count -ne 3) { throw 'Expected exactly three release packages.' }
+          $versions = @($packages | ForEach-Object { $_.version } | Sort-Object -Unique)
+          if ($versions.Count -ne 1) { throw "Release packages have inconsistent versions: $($versions -join ', ')" }
+          $architectures = @($packages | ForEach-Object { $_.arch } | Sort-Object -Unique)
+          if ($architectures.Count -ne 3) { throw "Release packages have duplicate architectures: $($architectures -join ', ')" }
+          $tag = if ('${{ github.event_name }}' -eq 'workflow_dispatch') { "v$($versions[0])" } else { '${{ github.ref_name }}' }
+          if ($tag -notmatch '^v[0-9][0-9A-Za-z.+-]*$') { throw "Invalid release tag: $tag" }
+          foreach ($package in $packages) {
+            $package.url = "https://github.com/${{ github.repository }}/releases/download/$tag/$($package.file)"
+            $package.Remove('file')
+          }
           [ordered]@{ version = 1; packages = @($packages) } | ConvertTo-Json -Depth 4 | Set-Content (Join-Path $assets 'index.json') -Encoding utf8NoBOM
           "tag=$tag" >> $env:GITHUB_OUTPUT
       - name: Create release and upload assets
