@@ -41,7 +41,7 @@ function Invoke-Compiler {
 
 $metadata = [ordered]@{
     test_id = 'TCC-CX-TC-0003'
-    requirement_ids = @('TCC-CX-REQ-0004')
+    requirement_ids = @('TCC-CX-REQ-0004', 'TCC-CX-REQ-0005')
     started_utc = (Get-Date).ToUniversalTime().ToString('o')
     compiler = $compilerPath
     execution_mode = $ExecutionMode

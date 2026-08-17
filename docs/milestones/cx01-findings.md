@@ -144,3 +144,20 @@ anonymous two-field internal aggregate rather than a dedicated complex base
 type. Object size and generated code remain correct, and CX1 contains no
 debugger presentation requirement. CX2 now emits a dedicated
 `DW_ATE_complex_float` base type, verified by `TCC-CX-TC-1007`.
+
+## CX1-F-0010 — Windows long-double arithmetic lost type identity
+
+**Phase injected:** Existing double-width long-double representation
+
+**Phase detected:** Post-release `_Generic` probe
+
+**Severity:** High
+
+**Status:** Resolved in TinyCC rc.1442
+
+The usual arithmetic conversion code compared only `VT_BTYPE`. On targets
+where `long double` is represented as `VT_DOUBLE | VT_LONG`, this discarded
+the identity bit and selected `double` for arithmetic involving `long double`.
+The common-type selection now recognizes the complete target long-double type.
+`TC-0003` covers both operand orders, real source ranks, and the conditional
+operator, with GCC serving as the available independent oracle.

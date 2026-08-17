@@ -2,6 +2,22 @@ typedef float _Complex complex_float;
 typedef double _Complex complex_double;
 typedef long double _Complex complex_long_double;
 
+#define IS_LONG_DOUBLE(expression) \
+    _Generic((expression), long double: 1, default: 0)
+
+_Static_assert(IS_LONG_DOUBLE(0.0f + 0.0L),
+               "float plus long double");
+_Static_assert(IS_LONG_DOUBLE(0.0L + 0.0f),
+               "long double plus float");
+_Static_assert(IS_LONG_DOUBLE(0.0L + 0.0L),
+               "long double plus long double");
+_Static_assert(IS_LONG_DOUBLE(0.0 + 0.0L),
+               "double plus long double");
+_Static_assert(IS_LONG_DOUBLE(1 + 0.0L),
+               "integer plus long double");
+_Static_assert(IS_LONG_DOUBLE(1 ? 0.0f : 0.0L),
+               "conditional float and long double");
+
 static union {
     complex_double value;
     double parts[2];
