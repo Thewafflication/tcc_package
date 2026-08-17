@@ -45,7 +45,7 @@ expected 8- and 16-byte encodings for its double-width long-double ABI.
 Traceability passes for 18 requirements, 15 controlled specifications, and 15
 automated implementations. The WSP common-tool self-tests, PowerShell parser
 checks, shell syntax checks, C source width check, and root/submodule whitespace
-checks pass. All seven recorded CX2 findings are resolved and rerun.
+checks pass. All eight recorded CX2 findings are resolved and rerun.
 
 ## Explicit Non-claims
 
@@ -56,3 +56,12 @@ retains the CX1 rules and is not represented as Annex-G hardened.
 
 ARM64 execution was unavailable on this host. ARM64 closeout therefore claims
 successful compiler/package generation and object-level inspection only.
+
+## Post-release correction — rc.1443
+
+The selected WCRT ARM64 integration exposed a private helper-ABI mismatch that
+the original compile-only operator gate did not inspect. TinyCC now represents
+`__tcc_muldc3`, `__tcc_divdc3`, `__tcc_mulxc3`, and `__tcc_divxc3` with their
+complete prototypes during lowering. The extended `TC-1005` gate checks the
+ARM64 PE register assignments in generated objects, and upstream test 149
+executes all three complex precisions through multiplication and division.

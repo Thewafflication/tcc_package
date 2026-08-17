@@ -41,7 +41,7 @@ oracle.
 | `TC-1002` | Basic complex functions and component representation |
 | `TC-1003` | Elementary functions, identities, and finite accuracy |
 | `TC-1004` | Allocated signed-zero, infinity, and NaN cases |
-| `TC-1005` | Runtime multiply/divide scaling and recovery |
+| `TC-1005` | Runtime multiply/divide scaling, recovery, and private helper ABI |
 | `TC-1006` | Complex type-generic selection and mixed `pow` |
 | `TC-1007` | DWARF complex base-type identity and size |
 | `TC-1008` | CX1, package, and upstream regression matrix |

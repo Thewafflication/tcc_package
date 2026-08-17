@@ -6,6 +6,9 @@
 Test multiplication and division with maximum finite, minimum normal,
 subnormal, zero, infinity, and NaN components. Include cases where textbook
 intermediates overflow but the mathematical result is finite, and verify each
-operand side effect occurs once. Pass requires recovered classifications and
-finite reference results.
+operand side effect occurs once. On ARM64 PE, inspect nonconstant helper call
+sites and require four real arguments in \texttt{d0}--\texttt{d3} and the
+result pointer in \texttt{x0}, with no variadic-ABI transfer into general
+registers. Pass requires recovered classifications, finite reference results,
+and matching caller/helper conventions.
 \end{document}

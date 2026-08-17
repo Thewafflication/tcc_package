@@ -72,3 +72,17 @@ literals. Mixed `pow` passes on Windows and Linux with single evaluation.
 The Linux wrapper invoked the source compiler without selecting its freshly
 built runtime library. It now supplies `-B` with the build directory. The
 hardened arithmetic prerequisite and full upstream suite pass from that tree.
+
+## CX2-F-0008 — Windows ARM64 complex helper ABI mismatch
+
+**Severity:** Critical
+
+**Status:** Resolved
+
+Complex multiplication and division lowered their runtime calls through the
+generic old-style helper type. The Windows ARM64 backend correctly classified
+those calls like variadic calls, placing the four binary64 components in
+`x0`--`x3` and the result pointer in `x4`, while the typed C helper entries
+expected `d0`--`d3` and `x0`. The compiler now gives these private helpers
+complete ANSI prototypes. `TC-1005` executes float, double, and long-double
+multiply/divide cases and inspects ARM64 call sites even on cross-build hosts.

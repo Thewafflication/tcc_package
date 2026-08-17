@@ -49,9 +49,12 @@ Nonconstant complex multiplication and division shall use runtime recovery
 where direct textbook formulas produce spurious NaNs or overflow for finite
 or infinite IEEE operands. Ordinary finite behavior and single evaluation
 shall remain unchanged. Translation-time constant folding retains the CX1
-language rules and is outside the CX2 Annex-G non-claim.
+language rules and is outside the CX2 Annex-G non-claim. Compiler-generated
+helper calls and their separately compiled entries shall use the same target
+calling convention.
 
-**Verification:** `TC-1005` scaled, subnormal, infinite, and side-effect cases.
+**Verification:** `TC-1005` scaled, subnormal, infinite, side-effect, and
+private helper-ABI cases.
 
 ## TCC-CX-REQ-1006 — Type-generic Math
 
