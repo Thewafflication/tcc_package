@@ -59,15 +59,34 @@ Invoke-WebRequest https://github.com/Thewafflication/tcc_package/releases/latest
 wpm trust add wpm-release.public
 ```
 
+## SIMD support and roadmap
+
+The released compiler supports MMX, SSE, and SSE2 C intrinsics on x86 and x64,
+including vector types, assembler support, and tested calling conventions.
+The SSE2 hash-slide operations expand at the call site, and 128-bit vector
+assignments use native vector copies. See [SIMD support](docs/simd-support.md)
+for coverage, limitations, and verification commands. Callers must ensure the
+executing CPU and OS support the instructions they use.
+
+The [SIMD expansion roadmap](docs/simd-roadmap.md) proposes these next steps:
+
+| Stage | Planned scope |
+| --- | --- |
+| Foundations | Vector representation, feature selection, intrinsic lowering, and CI validation |
+| Initial extensions | SSE3/SSSE3 and ARM64 NEON, starting with compression kernels |
+| Broader coverage | SSE4.1/SSE4.2, then AVX and AVX2/FMA3/F16C; workload-driven ARM extensions |
+| Advanced vectors | Separate AVX-512 and ARM SVE/SVE2 projects |
+
+These extensions are planned, not released support. NEON is the first ARM64
+SIMD target; SVE/SVE2 requires a separate scalable-vector design. The roadmap
+defines dependencies, ABI tests, feature-detection rules, and release gates.
+
 ## Prerequisites
 
 - CMake 3.21 or newer and Ninja
 - Visual Studio 2022 or newer with the MSVC x64 tools
 
 ## Build
-
-SSE/SSE2 C types, intrinsic headers, ABI support, assembler coverage and
-validation commands are documented in [SIMD support](docs/simd-support.md).
 
 ```powershell
 cmake --preset x86-release

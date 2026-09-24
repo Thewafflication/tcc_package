@@ -6,6 +6,11 @@ the x86-64 baseline and is available on many older 32-bit CPUs. Generated SIMD
 code requires the corresponding CPU and OS support; there is no automatic
 runtime dispatch or auto-vectorization.
 
+This page describes implemented support. SSE3/SSSE3, SSE4, AVX-family
+intrinsics, and ARM64 NEON/SVE are planned in the
+[SIMD expansion roadmap](simd-roadmap.md). An ARM64 package build does not
+currently imply an ARM SIMD intrinsic interface.
+
 ## C types, intrinsics and ABI
 
 `<xmmintrin.h>` defines `__m128`; `<emmintrin.h>` additionally defines `__m128d`
@@ -101,6 +106,10 @@ cmake --build out/build/x64-debug --target tinycc
 ctest --test-dir out/build/x64-debug -L simd --output-on-failure
 ```
 
+Run these tests explicitly: the current GitHub packaging workflow builds
+packages and verifies release signatures, but does not run the SIMD suites.
+Adding required SIMD execution gates to CI is part of the roadmap.
+
 CTest tests both named x86 cross-compilers in each package. The assembler tests
 compare exact bytes and lengths against GNU assembler fixtures: 414 i386 and
 665 x86-64 cases. Runtime tests cover alignment, lane preservation, immediate
@@ -137,9 +146,10 @@ SSE2 and do not attempt to execute safely on pre-SSE2 systems.
 
 ## Next priorities
 
-Add SSE3, SSSE3 and SSE4 with explicit target-feature handling. AVX and AVX2/FMA
-follow with VEX encoding, YMM types and ABI support, and CPU/OS feature checks.
-AVX-512 comes after those more broadly compatible foundations.
+The proposed [SIMD expansion roadmap](simd-roadmap.md) covers SSE3/SSSE3,
+SSE4, AVX/AVX2/FMA, and AVX-512, alongside ARM64 NEON and later SVE/SVE2.
+It defines shared foundations, target-specific milestones, runtime feature
+policy, ABI work, and validation/release gates.
 
 Instruction definitions follow the
 [Intel architecture manuals](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html).
