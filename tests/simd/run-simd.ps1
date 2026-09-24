@@ -89,7 +89,16 @@ Invoke-Checked @('-c', "$PSScriptRoot/header-interfaces.c", '-o', (Join-Path $wo
 Invoke-Checked @("$PSScriptRoot/headers.c", '-bt', '-o', $exe) 'headers-build.log'
 & $exe | Tee-Object -FilePath (Join-Path $work 'headers-run.log')
 if ($LASTEXITCODE -ne 0) { throw "SIMD header execution failed: $work" }
+foreach ($case in @('callsite', 'slide-hash')) {
+    $exe = Join-Path $work "$case.exe"
+    Invoke-Checked @("$PSScriptRoot/$case.c", '-o', $exe) "$case-build.log"
+    & $exe | Tee-Object -FilePath (Join-Path $work "$case-run.log")
+    if ($LASTEXITCODE -ne 0) { throw "SIMD $case correctness failed: $work" }
+}
+# Timings from slide-hash are informational, never pass/fail thresholds.
 $invalidC = @(
+    '__m128i f(__m128 a) { return _mm_subs_epu16(a,a); }',
+    'void f(const __m128i *p, __m128i a) { _mm_store_si128(p,a); }',
     '__m128 f(__m128 a, int n) { return _mm_shuffle_ps(a,a,n); }',
     '__m128i f(__m128i a) { return _mm_slli_si128(a,256); }',
     '__m128 f(__m128i a) { return a; }',
@@ -108,7 +117,7 @@ if ($TargetArchitecture -eq 'x86') {
 for ($i = 0; $i -lt $invalidC.Count; ++$i) {
     $path = Join-Path $work "invalid-c-$i.c"
     @('#include <emmintrin.h>', $invalidC[$i]) | Set-Content -LiteralPath $path
-    $output = & $compilerPath -c $path -o (Join-Path $work "invalid-c-$i.o") 2>&1
+    $output = & $compilerPath -Werror -c $path -o (Join-Path $work "invalid-c-$i.o") 2>&1
     $result = $LASTEXITCODE
     $output | Set-Content -LiteralPath (Join-Path $work "invalid-c-$i.log")
     if ($result -eq 0) { throw "Accepted invalid SIMD C: $($invalidC[$i])" }

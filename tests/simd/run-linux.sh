@@ -14,6 +14,10 @@ arch=${4:-64}
 "$work/headers"
 "$compiler" -B"$base" -L"$base" -I"$headers" -bt "$tests/intrinsics.c" -o "$work/intrinsics"
 "$work/intrinsics"
+for name in callsite slide-hash; do
+    "$compiler" -B"$base" -L"$base" -I"$headers" "$tests/$name.c" -o "$work/$name"
+    "$work/$name"
+done
 gcc -m"$arch" -O2 -msse2 "$tests/intrinsics.c" -o "$work/reference"
 "$work/reference"
 gcc -m"$arch" -shared -fPIC -O2 -msse2 -mmmx "$tests/abi-peer.c" -o "$work/peer.so"

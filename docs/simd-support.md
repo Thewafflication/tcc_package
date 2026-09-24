@@ -32,9 +32,16 @@ upper lanes where the instruction requires it. The internal checked primitive
 `__builtin_tcc_simd` shares its operation catalogue with the installed headers.
 
 Values remain addressable in compiler-managed storage; builtins emit native
-SSE/SSE2 instructions. TinyCC's existing inline-function implementation can
-leave wrapper calls and copies, so this is a correctness foundation rather
-than an optimizing vector compiler.
+SSE/SSE2 instructions. Assignments of 128-bit vector values use a vector
+load/store pair instead of a general structure copy (bounds-checked builds
+retain the checked copy path). `_mm_load_si128`, `_mm_subs_epu16`, and
+`_mm_store_si128` expand at the call site, removing wrapper calls from the
+SSE2 hash-slide loop in issue #4. Each argument is evaluated once; taking
+their addresses or using parenthesized calls still uses the function forms.
+Other wrappers can still introduce calls. Vector temporaries remain in
+memory; this does not add register allocation across intrinsic operations
+or impose SSE2 on scalar-only i386 code. Callers retain responsibility for
+CPU/OS feature checks.
 MMX temporaries are stored to memory and followed by EMMS when no live MMX
 register values are needed, allowing ordinary C scalar arithmetic to use x87.
 COMI/UCOMI use ordered comparisons: unordered equality/less/less-equal are
@@ -101,6 +108,19 @@ zero and boundary counts, saturation, wrapping, NaNs, conversion rounding,
 unaligned and masked memory operations, side effects and inline assembly.
 Negative C tests check malformed builtins, incompatible types, nonconstant
 immediates, const destinations and invalid clobbers.
+
+The suite also checks nested hash-slide intrinsics, argument side effects,
+function forms and vector assignments. `tests/simd/slide-hash.c` compares
+scalar and SSE2 results across all unsigned 16-bit inputs, then prints timings
+for the issue #4 workload on both x86 and x64. Only correctness gates the
+test; timings are informational and depend on the host. To run it separately:
+
+```powershell
+out/build/x64-debug/package/x86_64-win32-tcc.exe tests/simd/slide-hash.c -o out/slide-hash-x64.exe
+out/slide-hash-x64.exe
+out/build/x64-debug/package/i386-win32-tcc.exe tests/simd/slide-hash.c -o out/slide-hash-x86.exe
+out/slide-hash-x86.exe
+```
 
 Independent MSVC DLL tests cover vector parameters/returns, mixed scalar/vector
 arguments, nine-vector calls, callbacks, vector arrays/unions, packed vectors,
