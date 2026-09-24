@@ -1,0 +1,4323 @@
+{
+  "reference": "GNU assembler (GNU Binutils for Debian) 2.40",
+  "x32": [
+    {
+      "asm": "addps %xmm2, %xmm1",
+      "hex": "0f58ca"
+    },
+    {
+      "asm": "addps 16(%eax), %xmm1",
+      "hex": "0f584810"
+    },
+    {
+      "asm": "mulps %xmm2, %xmm1",
+      "hex": "0f59ca"
+    },
+    {
+      "asm": "mulps 16(%eax), %xmm1",
+      "hex": "0f594810"
+    },
+    {
+      "asm": "subps %xmm2, %xmm1",
+      "hex": "0f5cca"
+    },
+    {
+      "asm": "subps 16(%eax), %xmm1",
+      "hex": "0f5c4810"
+    },
+    {
+      "asm": "minps %xmm2, %xmm1",
+      "hex": "0f5dca"
+    },
+    {
+      "asm": "minps 16(%eax), %xmm1",
+      "hex": "0f5d4810"
+    },
+    {
+      "asm": "divps %xmm2, %xmm1",
+      "hex": "0f5eca"
+    },
+    {
+      "asm": "divps 16(%eax), %xmm1",
+      "hex": "0f5e4810"
+    },
+    {
+      "asm": "maxps %xmm2, %xmm1",
+      "hex": "0f5fca"
+    },
+    {
+      "asm": "maxps 16(%eax), %xmm1",
+      "hex": "0f5f4810"
+    },
+    {
+      "asm": "sqrtps %xmm2, %xmm1",
+      "hex": "0f51ca"
+    },
+    {
+      "asm": "sqrtps 16(%eax), %xmm1",
+      "hex": "0f514810"
+    },
+    {
+      "asm": "addss %xmm2, %xmm1",
+      "hex": "f30f58ca"
+    },
+    {
+      "asm": "addss 16(%eax), %xmm1",
+      "hex": "f30f584810"
+    },
+    {
+      "asm": "mulss %xmm2, %xmm1",
+      "hex": "f30f59ca"
+    },
+    {
+      "asm": "mulss 16(%eax), %xmm1",
+      "hex": "f30f594810"
+    },
+    {
+      "asm": "subss %xmm2, %xmm1",
+      "hex": "f30f5cca"
+    },
+    {
+      "asm": "subss 16(%eax), %xmm1",
+      "hex": "f30f5c4810"
+    },
+    {
+      "asm": "minss %xmm2, %xmm1",
+      "hex": "f30f5dca"
+    },
+    {
+      "asm": "minss 16(%eax), %xmm1",
+      "hex": "f30f5d4810"
+    },
+    {
+      "asm": "divss %xmm2, %xmm1",
+      "hex": "f30f5eca"
+    },
+    {
+      "asm": "divss 16(%eax), %xmm1",
+      "hex": "f30f5e4810"
+    },
+    {
+      "asm": "maxss %xmm2, %xmm1",
+      "hex": "f30f5fca"
+    },
+    {
+      "asm": "maxss 16(%eax), %xmm1",
+      "hex": "f30f5f4810"
+    },
+    {
+      "asm": "sqrtss %xmm2, %xmm1",
+      "hex": "f30f51ca"
+    },
+    {
+      "asm": "sqrtss 16(%eax), %xmm1",
+      "hex": "f30f514810"
+    },
+    {
+      "asm": "addpd %xmm2, %xmm1",
+      "hex": "660f58ca"
+    },
+    {
+      "asm": "addpd 16(%eax), %xmm1",
+      "hex": "660f584810"
+    },
+    {
+      "asm": "mulpd %xmm2, %xmm1",
+      "hex": "660f59ca"
+    },
+    {
+      "asm": "mulpd 16(%eax), %xmm1",
+      "hex": "660f594810"
+    },
+    {
+      "asm": "subpd %xmm2, %xmm1",
+      "hex": "660f5cca"
+    },
+    {
+      "asm": "subpd 16(%eax), %xmm1",
+      "hex": "660f5c4810"
+    },
+    {
+      "asm": "minpd %xmm2, %xmm1",
+      "hex": "660f5dca"
+    },
+    {
+      "asm": "minpd 16(%eax), %xmm1",
+      "hex": "660f5d4810"
+    },
+    {
+      "asm": "divpd %xmm2, %xmm1",
+      "hex": "660f5eca"
+    },
+    {
+      "asm": "divpd 16(%eax), %xmm1",
+      "hex": "660f5e4810"
+    },
+    {
+      "asm": "maxpd %xmm2, %xmm1",
+      "hex": "660f5fca"
+    },
+    {
+      "asm": "maxpd 16(%eax), %xmm1",
+      "hex": "660f5f4810"
+    },
+    {
+      "asm": "sqrtpd %xmm2, %xmm1",
+      "hex": "660f51ca"
+    },
+    {
+      "asm": "sqrtpd 16(%eax), %xmm1",
+      "hex": "660f514810"
+    },
+    {
+      "asm": "addsd %xmm2, %xmm1",
+      "hex": "f20f58ca"
+    },
+    {
+      "asm": "addsd 16(%eax), %xmm1",
+      "hex": "f20f584810"
+    },
+    {
+      "asm": "mulsd %xmm2, %xmm1",
+      "hex": "f20f59ca"
+    },
+    {
+      "asm": "mulsd 16(%eax), %xmm1",
+      "hex": "f20f594810"
+    },
+    {
+      "asm": "subsd %xmm2, %xmm1",
+      "hex": "f20f5cca"
+    },
+    {
+      "asm": "subsd 16(%eax), %xmm1",
+      "hex": "f20f5c4810"
+    },
+    {
+      "asm": "minsd %xmm2, %xmm1",
+      "hex": "f20f5dca"
+    },
+    {
+      "asm": "minsd 16(%eax), %xmm1",
+      "hex": "f20f5d4810"
+    },
+    {
+      "asm": "divsd %xmm2, %xmm1",
+      "hex": "f20f5eca"
+    },
+    {
+      "asm": "divsd 16(%eax), %xmm1",
+      "hex": "f20f5e4810"
+    },
+    {
+      "asm": "maxsd %xmm2, %xmm1",
+      "hex": "f20f5fca"
+    },
+    {
+      "asm": "maxsd 16(%eax), %xmm1",
+      "hex": "f20f5f4810"
+    },
+    {
+      "asm": "sqrtsd %xmm2, %xmm1",
+      "hex": "f20f51ca"
+    },
+    {
+      "asm": "sqrtsd 16(%eax), %xmm1",
+      "hex": "f20f514810"
+    },
+    {
+      "asm": "andps %xmm2, %xmm1",
+      "hex": "0f54ca"
+    },
+    {
+      "asm": "andps 16(%eax), %xmm1",
+      "hex": "0f544810"
+    },
+    {
+      "asm": "andnps %xmm2, %xmm1",
+      "hex": "0f55ca"
+    },
+    {
+      "asm": "andnps 16(%eax), %xmm1",
+      "hex": "0f554810"
+    },
+    {
+      "asm": "orps %xmm2, %xmm1",
+      "hex": "0f56ca"
+    },
+    {
+      "asm": "orps 16(%eax), %xmm1",
+      "hex": "0f564810"
+    },
+    {
+      "asm": "xorps %xmm2, %xmm1",
+      "hex": "0f57ca"
+    },
+    {
+      "asm": "xorps 16(%eax), %xmm1",
+      "hex": "0f574810"
+    },
+    {
+      "asm": "unpcklps %xmm2, %xmm1",
+      "hex": "0f14ca"
+    },
+    {
+      "asm": "unpcklps 16(%eax), %xmm1",
+      "hex": "0f144810"
+    },
+    {
+      "asm": "unpckhps %xmm2, %xmm1",
+      "hex": "0f15ca"
+    },
+    {
+      "asm": "unpckhps 16(%eax), %xmm1",
+      "hex": "0f154810"
+    },
+    {
+      "asm": "andpd %xmm2, %xmm1",
+      "hex": "660f54ca"
+    },
+    {
+      "asm": "andpd 16(%eax), %xmm1",
+      "hex": "660f544810"
+    },
+    {
+      "asm": "andnpd %xmm2, %xmm1",
+      "hex": "660f55ca"
+    },
+    {
+      "asm": "andnpd 16(%eax), %xmm1",
+      "hex": "660f554810"
+    },
+    {
+      "asm": "orpd %xmm2, %xmm1",
+      "hex": "660f56ca"
+    },
+    {
+      "asm": "orpd 16(%eax), %xmm1",
+      "hex": "660f564810"
+    },
+    {
+      "asm": "xorpd %xmm2, %xmm1",
+      "hex": "660f57ca"
+    },
+    {
+      "asm": "xorpd 16(%eax), %xmm1",
+      "hex": "660f574810"
+    },
+    {
+      "asm": "unpcklpd %xmm2, %xmm1",
+      "hex": "660f14ca"
+    },
+    {
+      "asm": "unpcklpd 16(%eax), %xmm1",
+      "hex": "660f144810"
+    },
+    {
+      "asm": "unpckhpd %xmm2, %xmm1",
+      "hex": "660f15ca"
+    },
+    {
+      "asm": "unpckhpd 16(%eax), %xmm1",
+      "hex": "660f154810"
+    },
+    {
+      "asm": "rcpps %xmm2, %xmm1",
+      "hex": "0f53ca"
+    },
+    {
+      "asm": "rcpps 16(%eax), %xmm1",
+      "hex": "0f534810"
+    },
+    {
+      "asm": "rcpss %xmm2, %xmm1",
+      "hex": "f30f53ca"
+    },
+    {
+      "asm": "rcpss 16(%eax), %xmm1",
+      "hex": "f30f534810"
+    },
+    {
+      "asm": "rsqrtps %xmm2, %xmm1",
+      "hex": "0f52ca"
+    },
+    {
+      "asm": "rsqrtps 16(%eax), %xmm1",
+      "hex": "0f524810"
+    },
+    {
+      "asm": "rsqrtss %xmm2, %xmm1",
+      "hex": "f30f52ca"
+    },
+    {
+      "asm": "rsqrtss 16(%eax), %xmm1",
+      "hex": "f30f524810"
+    },
+    {
+      "asm": "comiss %xmm2, %xmm1",
+      "hex": "0f2fca"
+    },
+    {
+      "asm": "comiss 16(%eax), %xmm1",
+      "hex": "0f2f4810"
+    },
+    {
+      "asm": "ucomiss %xmm2, %xmm1",
+      "hex": "0f2eca"
+    },
+    {
+      "asm": "ucomiss 16(%eax), %xmm1",
+      "hex": "0f2e4810"
+    },
+    {
+      "asm": "comisd %xmm2, %xmm1",
+      "hex": "660f2fca"
+    },
+    {
+      "asm": "comisd 16(%eax), %xmm1",
+      "hex": "660f2f4810"
+    },
+    {
+      "asm": "ucomisd %xmm2, %xmm1",
+      "hex": "660f2eca"
+    },
+    {
+      "asm": "ucomisd 16(%eax), %xmm1",
+      "hex": "660f2e4810"
+    },
+    {
+      "asm": "cvtps2pd %xmm2, %xmm1",
+      "hex": "0f5aca"
+    },
+    {
+      "asm": "cvtps2pd 16(%eax), %xmm1",
+      "hex": "0f5a4810"
+    },
+    {
+      "asm": "cvtpd2ps %xmm2, %xmm1",
+      "hex": "660f5aca"
+    },
+    {
+      "asm": "cvtpd2ps 16(%eax), %xmm1",
+      "hex": "660f5a4810"
+    },
+    {
+      "asm": "cvtss2sd %xmm2, %xmm1",
+      "hex": "f30f5aca"
+    },
+    {
+      "asm": "cvtss2sd 16(%eax), %xmm1",
+      "hex": "f30f5a4810"
+    },
+    {
+      "asm": "cvtsd2ss %xmm2, %xmm1",
+      "hex": "f20f5aca"
+    },
+    {
+      "asm": "cvtsd2ss 16(%eax), %xmm1",
+      "hex": "f20f5a4810"
+    },
+    {
+      "asm": "cvtdq2ps %xmm2, %xmm1",
+      "hex": "0f5bca"
+    },
+    {
+      "asm": "cvtdq2ps 16(%eax), %xmm1",
+      "hex": "0f5b4810"
+    },
+    {
+      "asm": "cvtps2dq %xmm2, %xmm1",
+      "hex": "660f5bca"
+    },
+    {
+      "asm": "cvtps2dq 16(%eax), %xmm1",
+      "hex": "660f5b4810"
+    },
+    {
+      "asm": "cvttps2dq %xmm2, %xmm1",
+      "hex": "f30f5bca"
+    },
+    {
+      "asm": "cvttps2dq 16(%eax), %xmm1",
+      "hex": "f30f5b4810"
+    },
+    {
+      "asm": "cvtdq2pd %xmm2, %xmm1",
+      "hex": "f30fe6ca"
+    },
+    {
+      "asm": "cvtdq2pd 16(%eax), %xmm1",
+      "hex": "f30fe64810"
+    },
+    {
+      "asm": "cvtpd2dq %xmm2, %xmm1",
+      "hex": "f20fe6ca"
+    },
+    {
+      "asm": "cvtpd2dq 16(%eax), %xmm1",
+      "hex": "f20fe64810"
+    },
+    {
+      "asm": "cvttpd2dq %xmm2, %xmm1",
+      "hex": "660fe6ca"
+    },
+    {
+      "asm": "cvttpd2dq 16(%eax), %xmm1",
+      "hex": "660fe64810"
+    },
+    {
+      "asm": "punpcklqdq %xmm2, %xmm1",
+      "hex": "660f6cca"
+    },
+    {
+      "asm": "punpcklqdq 16(%eax), %xmm1",
+      "hex": "660f6c4810"
+    },
+    {
+      "asm": "punpckhqdq %xmm2, %xmm1",
+      "hex": "660f6dca"
+    },
+    {
+      "asm": "punpckhqdq 16(%eax), %xmm1",
+      "hex": "660f6d4810"
+    },
+    {
+      "asm": "cmpeqps %xmm2, %xmm1",
+      "hex": "0fc2ca00"
+    },
+    {
+      "asm": "cmpeqps 16(%eax), %xmm1",
+      "hex": "0fc2481000"
+    },
+    {
+      "asm": "cmpltps %xmm2, %xmm1",
+      "hex": "0fc2ca01"
+    },
+    {
+      "asm": "cmpltps 16(%eax), %xmm1",
+      "hex": "0fc2481001"
+    },
+    {
+      "asm": "cmpleps %xmm2, %xmm1",
+      "hex": "0fc2ca02"
+    },
+    {
+      "asm": "cmpleps 16(%eax), %xmm1",
+      "hex": "0fc2481002"
+    },
+    {
+      "asm": "cmpunordps %xmm2, %xmm1",
+      "hex": "0fc2ca03"
+    },
+    {
+      "asm": "cmpunordps 16(%eax), %xmm1",
+      "hex": "0fc2481003"
+    },
+    {
+      "asm": "cmpneqps %xmm2, %xmm1",
+      "hex": "0fc2ca04"
+    },
+    {
+      "asm": "cmpneqps 16(%eax), %xmm1",
+      "hex": "0fc2481004"
+    },
+    {
+      "asm": "cmpnltps %xmm2, %xmm1",
+      "hex": "0fc2ca05"
+    },
+    {
+      "asm": "cmpnltps 16(%eax), %xmm1",
+      "hex": "0fc2481005"
+    },
+    {
+      "asm": "cmpnleps %xmm2, %xmm1",
+      "hex": "0fc2ca06"
+    },
+    {
+      "asm": "cmpnleps 16(%eax), %xmm1",
+      "hex": "0fc2481006"
+    },
+    {
+      "asm": "cmpordps %xmm2, %xmm1",
+      "hex": "0fc2ca07"
+    },
+    {
+      "asm": "cmpordps 16(%eax), %xmm1",
+      "hex": "0fc2481007"
+    },
+    {
+      "asm": "cmpeqss %xmm2, %xmm1",
+      "hex": "f30fc2ca00"
+    },
+    {
+      "asm": "cmpeqss 16(%eax), %xmm1",
+      "hex": "f30fc2481000"
+    },
+    {
+      "asm": "cmpltss %xmm2, %xmm1",
+      "hex": "f30fc2ca01"
+    },
+    {
+      "asm": "cmpltss 16(%eax), %xmm1",
+      "hex": "f30fc2481001"
+    },
+    {
+      "asm": "cmpless %xmm2, %xmm1",
+      "hex": "f30fc2ca02"
+    },
+    {
+      "asm": "cmpless 16(%eax), %xmm1",
+      "hex": "f30fc2481002"
+    },
+    {
+      "asm": "cmpunordss %xmm2, %xmm1",
+      "hex": "f30fc2ca03"
+    },
+    {
+      "asm": "cmpunordss 16(%eax), %xmm1",
+      "hex": "f30fc2481003"
+    },
+    {
+      "asm": "cmpneqss %xmm2, %xmm1",
+      "hex": "f30fc2ca04"
+    },
+    {
+      "asm": "cmpneqss 16(%eax), %xmm1",
+      "hex": "f30fc2481004"
+    },
+    {
+      "asm": "cmpnltss %xmm2, %xmm1",
+      "hex": "f30fc2ca05"
+    },
+    {
+      "asm": "cmpnltss 16(%eax), %xmm1",
+      "hex": "f30fc2481005"
+    },
+    {
+      "asm": "cmpnless %xmm2, %xmm1",
+      "hex": "f30fc2ca06"
+    },
+    {
+      "asm": "cmpnless 16(%eax), %xmm1",
+      "hex": "f30fc2481006"
+    },
+    {
+      "asm": "cmpordss %xmm2, %xmm1",
+      "hex": "f30fc2ca07"
+    },
+    {
+      "asm": "cmpordss 16(%eax), %xmm1",
+      "hex": "f30fc2481007"
+    },
+    {
+      "asm": "cmpeqpd %xmm2, %xmm1",
+      "hex": "660fc2ca00"
+    },
+    {
+      "asm": "cmpeqpd 16(%eax), %xmm1",
+      "hex": "660fc2481000"
+    },
+    {
+      "asm": "cmpltpd %xmm2, %xmm1",
+      "hex": "660fc2ca01"
+    },
+    {
+      "asm": "cmpltpd 16(%eax), %xmm1",
+      "hex": "660fc2481001"
+    },
+    {
+      "asm": "cmplepd %xmm2, %xmm1",
+      "hex": "660fc2ca02"
+    },
+    {
+      "asm": "cmplepd 16(%eax), %xmm1",
+      "hex": "660fc2481002"
+    },
+    {
+      "asm": "cmpunordpd %xmm2, %xmm1",
+      "hex": "660fc2ca03"
+    },
+    {
+      "asm": "cmpunordpd 16(%eax), %xmm1",
+      "hex": "660fc2481003"
+    },
+    {
+      "asm": "cmpneqpd %xmm2, %xmm1",
+      "hex": "660fc2ca04"
+    },
+    {
+      "asm": "cmpneqpd 16(%eax), %xmm1",
+      "hex": "660fc2481004"
+    },
+    {
+      "asm": "cmpnltpd %xmm2, %xmm1",
+      "hex": "660fc2ca05"
+    },
+    {
+      "asm": "cmpnltpd 16(%eax), %xmm1",
+      "hex": "660fc2481005"
+    },
+    {
+      "asm": "cmpnlepd %xmm2, %xmm1",
+      "hex": "660fc2ca06"
+    },
+    {
+      "asm": "cmpnlepd 16(%eax), %xmm1",
+      "hex": "660fc2481006"
+    },
+    {
+      "asm": "cmpordpd %xmm2, %xmm1",
+      "hex": "660fc2ca07"
+    },
+    {
+      "asm": "cmpordpd 16(%eax), %xmm1",
+      "hex": "660fc2481007"
+    },
+    {
+      "asm": "cmpeqsd %xmm2, %xmm1",
+      "hex": "f20fc2ca00"
+    },
+    {
+      "asm": "cmpeqsd 16(%eax), %xmm1",
+      "hex": "f20fc2481000"
+    },
+    {
+      "asm": "cmpltsd %xmm2, %xmm1",
+      "hex": "f20fc2ca01"
+    },
+    {
+      "asm": "cmpltsd 16(%eax), %xmm1",
+      "hex": "f20fc2481001"
+    },
+    {
+      "asm": "cmplesd %xmm2, %xmm1",
+      "hex": "f20fc2ca02"
+    },
+    {
+      "asm": "cmplesd 16(%eax), %xmm1",
+      "hex": "f20fc2481002"
+    },
+    {
+      "asm": "cmpunordsd %xmm2, %xmm1",
+      "hex": "f20fc2ca03"
+    },
+    {
+      "asm": "cmpunordsd 16(%eax), %xmm1",
+      "hex": "f20fc2481003"
+    },
+    {
+      "asm": "cmpneqsd %xmm2, %xmm1",
+      "hex": "f20fc2ca04"
+    },
+    {
+      "asm": "cmpneqsd 16(%eax), %xmm1",
+      "hex": "f20fc2481004"
+    },
+    {
+      "asm": "cmpnltsd %xmm2, %xmm1",
+      "hex": "f20fc2ca05"
+    },
+    {
+      "asm": "cmpnltsd 16(%eax), %xmm1",
+      "hex": "f20fc2481005"
+    },
+    {
+      "asm": "cmpnlesd %xmm2, %xmm1",
+      "hex": "f20fc2ca06"
+    },
+    {
+      "asm": "cmpnlesd 16(%eax), %xmm1",
+      "hex": "f20fc2481006"
+    },
+    {
+      "asm": "cmpordsd %xmm2, %xmm1",
+      "hex": "f20fc2ca07"
+    },
+    {
+      "asm": "cmpordsd 16(%eax), %xmm1",
+      "hex": "f20fc2481007"
+    },
+    {
+      "asm": "maskmovq %mm2, %mm1",
+      "hex": "0ff7ca"
+    },
+    {
+      "asm": "maskmovdqu %xmm2, %xmm1",
+      "hex": "660ff7ca"
+    },
+    {
+      "asm": "movups %xmm2, %xmm1",
+      "hex": "0f10ca"
+    },
+    {
+      "asm": "movups 16(%eax), %xmm1",
+      "hex": "0f104810"
+    },
+    {
+      "asm": "movups %xmm3, 16(%eax)",
+      "hex": "0f115810"
+    },
+    {
+      "asm": "movaps %xmm2, %xmm1",
+      "hex": "0f28ca"
+    },
+    {
+      "asm": "movaps 16(%eax), %xmm1",
+      "hex": "0f284810"
+    },
+    {
+      "asm": "movaps %xmm3, 16(%eax)",
+      "hex": "0f295810"
+    },
+    {
+      "asm": "movss %xmm2, %xmm1",
+      "hex": "f30f10ca"
+    },
+    {
+      "asm": "movss 16(%eax), %xmm1",
+      "hex": "f30f104810"
+    },
+    {
+      "asm": "movss %xmm3, 16(%eax)",
+      "hex": "f30f115810"
+    },
+    {
+      "asm": "movupd %xmm2, %xmm1",
+      "hex": "660f10ca"
+    },
+    {
+      "asm": "movupd 16(%eax), %xmm1",
+      "hex": "660f104810"
+    },
+    {
+      "asm": "movupd %xmm3, 16(%eax)",
+      "hex": "660f115810"
+    },
+    {
+      "asm": "movapd %xmm2, %xmm1",
+      "hex": "660f28ca"
+    },
+    {
+      "asm": "movapd 16(%eax), %xmm1",
+      "hex": "660f284810"
+    },
+    {
+      "asm": "movapd %xmm3, 16(%eax)",
+      "hex": "660f295810"
+    },
+    {
+      "asm": "movsd %xmm2, %xmm1",
+      "hex": "f20f10ca"
+    },
+    {
+      "asm": "movsd 16(%eax), %xmm1",
+      "hex": "f20f104810"
+    },
+    {
+      "asm": "movsd %xmm3, 16(%eax)",
+      "hex": "f20f115810"
+    },
+    {
+      "asm": "movdqu %xmm2, %xmm1",
+      "hex": "f30f6fca"
+    },
+    {
+      "asm": "movdqu 16(%eax), %xmm1",
+      "hex": "f30f6f4810"
+    },
+    {
+      "asm": "movdqu %xmm3, 16(%eax)",
+      "hex": "f30f7f5810"
+    },
+    {
+      "asm": "movdqa %xmm2, %xmm1",
+      "hex": "660f6fca"
+    },
+    {
+      "asm": "movdqa 16(%eax), %xmm1",
+      "hex": "660f6f4810"
+    },
+    {
+      "asm": "movdqa %xmm3, 16(%eax)",
+      "hex": "660f7f5810"
+    },
+    {
+      "asm": "movlps 16(%eax), %xmm1",
+      "hex": "0f124810"
+    },
+    {
+      "asm": "movlps %xmm1, 16(%eax)",
+      "hex": "0f134810"
+    },
+    {
+      "asm": "movhps 16(%eax), %xmm1",
+      "hex": "0f164810"
+    },
+    {
+      "asm": "movhps %xmm1, 16(%eax)",
+      "hex": "0f174810"
+    },
+    {
+      "asm": "movlpd 16(%eax), %xmm1",
+      "hex": "660f124810"
+    },
+    {
+      "asm": "movlpd %xmm1, 16(%eax)",
+      "hex": "660f134810"
+    },
+    {
+      "asm": "movhpd 16(%eax), %xmm1",
+      "hex": "660f164810"
+    },
+    {
+      "asm": "movhpd %xmm1, 16(%eax)",
+      "hex": "660f174810"
+    },
+    {
+      "asm": "movhlps %xmm2, %xmm1",
+      "hex": "0f12ca"
+    },
+    {
+      "asm": "movlhps %xmm2, %xmm1",
+      "hex": "0f16ca"
+    },
+    {
+      "asm": "cmpps $3, %xmm2, %xmm1",
+      "hex": "0fc2ca03"
+    },
+    {
+      "asm": "cmpps $3, 16(%eax), %xmm1",
+      "hex": "0fc2481003"
+    },
+    {
+      "asm": "cmpss $3, %xmm2, %xmm1",
+      "hex": "f30fc2ca03"
+    },
+    {
+      "asm": "cmpss $3, 16(%eax), %xmm1",
+      "hex": "f30fc2481003"
+    },
+    {
+      "asm": "cmppd $3, %xmm2, %xmm1",
+      "hex": "660fc2ca03"
+    },
+    {
+      "asm": "cmppd $3, 16(%eax), %xmm1",
+      "hex": "660fc2481003"
+    },
+    {
+      "asm": "cmpsd $3, %xmm2, %xmm1",
+      "hex": "f20fc2ca03"
+    },
+    {
+      "asm": "cmpsd $3, 16(%eax), %xmm1",
+      "hex": "f20fc2481003"
+    },
+    {
+      "asm": "shufps $3, %xmm2, %xmm1",
+      "hex": "0fc6ca03"
+    },
+    {
+      "asm": "shufps $3, 16(%eax), %xmm1",
+      "hex": "0fc6481003"
+    },
+    {
+      "asm": "shufpd $3, %xmm2, %xmm1",
+      "hex": "660fc6ca03"
+    },
+    {
+      "asm": "shufpd $3, 16(%eax), %xmm1",
+      "hex": "660fc6481003"
+    },
+    {
+      "asm": "pshufd $3, %xmm2, %xmm1",
+      "hex": "660f70ca03"
+    },
+    {
+      "asm": "pshufd $3, 16(%eax), %xmm1",
+      "hex": "660f70481003"
+    },
+    {
+      "asm": "pshuflw $3, %xmm2, %xmm1",
+      "hex": "f20f70ca03"
+    },
+    {
+      "asm": "pshuflw $3, 16(%eax), %xmm1",
+      "hex": "f20f70481003"
+    },
+    {
+      "asm": "pshufhw $3, %xmm2, %xmm1",
+      "hex": "f30f70ca03"
+    },
+    {
+      "asm": "pshufhw $3, 16(%eax), %xmm1",
+      "hex": "f30f70481003"
+    },
+    {
+      "asm": "cvtsi2ss %ecx, %xmm2",
+      "hex": "f30f2ad1"
+    },
+    {
+      "asm": "cvtsi2ssl 16(%eax), %xmm2",
+      "hex": "f30f2a5010"
+    },
+    {
+      "asm": "cvtss2si %xmm2, %ecx",
+      "hex": "f30f2dca"
+    },
+    {
+      "asm": "cvtss2sil 16(%eax), %ecx",
+      "hex": "f30f2d4810"
+    },
+    {
+      "asm": "cvttss2si %xmm2, %ecx",
+      "hex": "f30f2cca"
+    },
+    {
+      "asm": "cvttss2sil 16(%eax), %ecx",
+      "hex": "f30f2c4810"
+    },
+    {
+      "asm": "cvtsi2sd %ecx, %xmm2",
+      "hex": "f20f2ad1"
+    },
+    {
+      "asm": "cvtsi2sdl 16(%eax), %xmm2",
+      "hex": "f20f2a5010"
+    },
+    {
+      "asm": "cvtsd2si %xmm2, %ecx",
+      "hex": "f20f2dca"
+    },
+    {
+      "asm": "cvtsd2sil 16(%eax), %ecx",
+      "hex": "f20f2d4810"
+    },
+    {
+      "asm": "cvttsd2si %xmm2, %ecx",
+      "hex": "f20f2cca"
+    },
+    {
+      "asm": "cvttsd2sil 16(%eax), %ecx",
+      "hex": "f20f2c4810"
+    },
+    {
+      "asm": "pavgb %mm2, %mm1",
+      "hex": "0fe0ca"
+    },
+    {
+      "asm": "pavgb 16(%eax), %mm1",
+      "hex": "0fe04810"
+    },
+    {
+      "asm": "pavgw %mm2, %mm1",
+      "hex": "0fe3ca"
+    },
+    {
+      "asm": "pavgw 16(%eax), %mm1",
+      "hex": "0fe34810"
+    },
+    {
+      "asm": "pmaxsw %mm2, %mm1",
+      "hex": "0feeca"
+    },
+    {
+      "asm": "pmaxsw 16(%eax), %mm1",
+      "hex": "0fee4810"
+    },
+    {
+      "asm": "pmaxub %mm2, %mm1",
+      "hex": "0fdeca"
+    },
+    {
+      "asm": "pmaxub 16(%eax), %mm1",
+      "hex": "0fde4810"
+    },
+    {
+      "asm": "pminsw %mm2, %mm1",
+      "hex": "0feaca"
+    },
+    {
+      "asm": "pminsw 16(%eax), %mm1",
+      "hex": "0fea4810"
+    },
+    {
+      "asm": "pminub %mm2, %mm1",
+      "hex": "0fdaca"
+    },
+    {
+      "asm": "pminub 16(%eax), %mm1",
+      "hex": "0fda4810"
+    },
+    {
+      "asm": "pmulhuw %mm2, %mm1",
+      "hex": "0fe4ca"
+    },
+    {
+      "asm": "pmulhuw 16(%eax), %mm1",
+      "hex": "0fe44810"
+    },
+    {
+      "asm": "psadbw %mm2, %mm1",
+      "hex": "0ff6ca"
+    },
+    {
+      "asm": "psadbw 16(%eax), %mm1",
+      "hex": "0ff64810"
+    },
+    {
+      "asm": "paddq %mm2, %mm1",
+      "hex": "0fd4ca"
+    },
+    {
+      "asm": "paddq 16(%eax), %mm1",
+      "hex": "0fd44810"
+    },
+    {
+      "asm": "psubq %mm2, %mm1",
+      "hex": "0ffbca"
+    },
+    {
+      "asm": "psubq 16(%eax), %mm1",
+      "hex": "0ffb4810"
+    },
+    {
+      "asm": "pmuludq %mm2, %mm1",
+      "hex": "0ff4ca"
+    },
+    {
+      "asm": "pmuludq 16(%eax), %mm1",
+      "hex": "0ff44810"
+    },
+    {
+      "asm": "paddb %mm2, %mm1",
+      "hex": "0ffcca"
+    },
+    {
+      "asm": "paddb 16(%eax), %mm1",
+      "hex": "0ffc4810"
+    },
+    {
+      "asm": "paddw %mm2, %mm1",
+      "hex": "0ffdca"
+    },
+    {
+      "asm": "paddw 16(%eax), %mm1",
+      "hex": "0ffd4810"
+    },
+    {
+      "asm": "paddd %mm2, %mm1",
+      "hex": "0ffeca"
+    },
+    {
+      "asm": "paddd 16(%eax), %mm1",
+      "hex": "0ffe4810"
+    },
+    {
+      "asm": "pxor %mm2, %mm1",
+      "hex": "0fefca"
+    },
+    {
+      "asm": "pxor 16(%eax), %mm1",
+      "hex": "0fef4810"
+    },
+    {
+      "asm": "pand %mm2, %mm1",
+      "hex": "0fdbca"
+    },
+    {
+      "asm": "pand 16(%eax), %mm1",
+      "hex": "0fdb4810"
+    },
+    {
+      "asm": "packsswb %mm2, %mm1",
+      "hex": "0f63ca"
+    },
+    {
+      "asm": "packsswb 16(%eax), %mm1",
+      "hex": "0f634810"
+    },
+    {
+      "asm": "psllw $3, %mm1",
+      "hex": "0f71f103"
+    },
+    {
+      "asm": "psllw %mm2, %mm1",
+      "hex": "0ff1ca"
+    },
+    {
+      "asm": "psllw 16(%eax), %mm1",
+      "hex": "0ff14810"
+    },
+    {
+      "asm": "pslld $3, %mm1",
+      "hex": "0f72f103"
+    },
+    {
+      "asm": "pslld %mm2, %mm1",
+      "hex": "0ff2ca"
+    },
+    {
+      "asm": "pslld 16(%eax), %mm1",
+      "hex": "0ff24810"
+    },
+    {
+      "asm": "psllq $3, %mm1",
+      "hex": "0f73f103"
+    },
+    {
+      "asm": "psllq %mm2, %mm1",
+      "hex": "0ff3ca"
+    },
+    {
+      "asm": "psllq 16(%eax), %mm1",
+      "hex": "0ff34810"
+    },
+    {
+      "asm": "psraw $3, %mm1",
+      "hex": "0f71e103"
+    },
+    {
+      "asm": "psraw %mm2, %mm1",
+      "hex": "0fe1ca"
+    },
+    {
+      "asm": "psraw 16(%eax), %mm1",
+      "hex": "0fe14810"
+    },
+    {
+      "asm": "psrad $3, %mm1",
+      "hex": "0f72e103"
+    },
+    {
+      "asm": "psrad %mm2, %mm1",
+      "hex": "0fe2ca"
+    },
+    {
+      "asm": "psrad 16(%eax), %mm1",
+      "hex": "0fe24810"
+    },
+    {
+      "asm": "psrlw $3, %mm1",
+      "hex": "0f71d103"
+    },
+    {
+      "asm": "psrlw %mm2, %mm1",
+      "hex": "0fd1ca"
+    },
+    {
+      "asm": "psrlw 16(%eax), %mm1",
+      "hex": "0fd14810"
+    },
+    {
+      "asm": "psrld $3, %mm1",
+      "hex": "0f72d103"
+    },
+    {
+      "asm": "psrld %mm2, %mm1",
+      "hex": "0fd2ca"
+    },
+    {
+      "asm": "psrld 16(%eax), %mm1",
+      "hex": "0fd24810"
+    },
+    {
+      "asm": "psrlq $3, %mm1",
+      "hex": "0f73d103"
+    },
+    {
+      "asm": "psrlq %mm2, %mm1",
+      "hex": "0fd3ca"
+    },
+    {
+      "asm": "psrlq 16(%eax), %mm1",
+      "hex": "0fd34810"
+    },
+    {
+      "asm": "pinsrw $3, %ecx, %mm1",
+      "hex": "0fc4c903"
+    },
+    {
+      "asm": "pinsrw $3, 16(%eax), %mm1",
+      "hex": "0fc4481003"
+    },
+    {
+      "asm": "pextrw $3, %mm2, %ecx",
+      "hex": "0fc5ca03"
+    },
+    {
+      "asm": "pmovmskb %mm2, %ecx",
+      "hex": "0fd7ca"
+    },
+    {
+      "asm": "movd %ecx, %mm1",
+      "hex": "0f6ec9"
+    },
+    {
+      "asm": "movd %mm1, %ecx",
+      "hex": "0f7ec9"
+    },
+    {
+      "asm": "pavgb %xmm2, %xmm1",
+      "hex": "660fe0ca"
+    },
+    {
+      "asm": "pavgb 16(%eax), %xmm1",
+      "hex": "660fe04810"
+    },
+    {
+      "asm": "pavgw %xmm2, %xmm1",
+      "hex": "660fe3ca"
+    },
+    {
+      "asm": "pavgw 16(%eax), %xmm1",
+      "hex": "660fe34810"
+    },
+    {
+      "asm": "pmaxsw %xmm2, %xmm1",
+      "hex": "660feeca"
+    },
+    {
+      "asm": "pmaxsw 16(%eax), %xmm1",
+      "hex": "660fee4810"
+    },
+    {
+      "asm": "pmaxub %xmm2, %xmm1",
+      "hex": "660fdeca"
+    },
+    {
+      "asm": "pmaxub 16(%eax), %xmm1",
+      "hex": "660fde4810"
+    },
+    {
+      "asm": "pminsw %xmm2, %xmm1",
+      "hex": "660feaca"
+    },
+    {
+      "asm": "pminsw 16(%eax), %xmm1",
+      "hex": "660fea4810"
+    },
+    {
+      "asm": "pminub %xmm2, %xmm1",
+      "hex": "660fdaca"
+    },
+    {
+      "asm": "pminub 16(%eax), %xmm1",
+      "hex": "660fda4810"
+    },
+    {
+      "asm": "pmulhuw %xmm2, %xmm1",
+      "hex": "660fe4ca"
+    },
+    {
+      "asm": "pmulhuw 16(%eax), %xmm1",
+      "hex": "660fe44810"
+    },
+    {
+      "asm": "psadbw %xmm2, %xmm1",
+      "hex": "660ff6ca"
+    },
+    {
+      "asm": "psadbw 16(%eax), %xmm1",
+      "hex": "660ff64810"
+    },
+    {
+      "asm": "paddq %xmm2, %xmm1",
+      "hex": "660fd4ca"
+    },
+    {
+      "asm": "paddq 16(%eax), %xmm1",
+      "hex": "660fd44810"
+    },
+    {
+      "asm": "psubq %xmm2, %xmm1",
+      "hex": "660ffbca"
+    },
+    {
+      "asm": "psubq 16(%eax), %xmm1",
+      "hex": "660ffb4810"
+    },
+    {
+      "asm": "pmuludq %xmm2, %xmm1",
+      "hex": "660ff4ca"
+    },
+    {
+      "asm": "pmuludq 16(%eax), %xmm1",
+      "hex": "660ff44810"
+    },
+    {
+      "asm": "paddb %xmm2, %xmm1",
+      "hex": "660ffcca"
+    },
+    {
+      "asm": "paddb 16(%eax), %xmm1",
+      "hex": "660ffc4810"
+    },
+    {
+      "asm": "paddw %xmm2, %xmm1",
+      "hex": "660ffdca"
+    },
+    {
+      "asm": "paddw 16(%eax), %xmm1",
+      "hex": "660ffd4810"
+    },
+    {
+      "asm": "paddd %xmm2, %xmm1",
+      "hex": "660ffeca"
+    },
+    {
+      "asm": "paddd 16(%eax), %xmm1",
+      "hex": "660ffe4810"
+    },
+    {
+      "asm": "pxor %xmm2, %xmm1",
+      "hex": "660fefca"
+    },
+    {
+      "asm": "pxor 16(%eax), %xmm1",
+      "hex": "660fef4810"
+    },
+    {
+      "asm": "pand %xmm2, %xmm1",
+      "hex": "660fdbca"
+    },
+    {
+      "asm": "pand 16(%eax), %xmm1",
+      "hex": "660fdb4810"
+    },
+    {
+      "asm": "packsswb %xmm2, %xmm1",
+      "hex": "660f63ca"
+    },
+    {
+      "asm": "packsswb 16(%eax), %xmm1",
+      "hex": "660f634810"
+    },
+    {
+      "asm": "psllw $3, %xmm1",
+      "hex": "660f71f103"
+    },
+    {
+      "asm": "psllw %xmm2, %xmm1",
+      "hex": "660ff1ca"
+    },
+    {
+      "asm": "psllw 16(%eax), %xmm1",
+      "hex": "660ff14810"
+    },
+    {
+      "asm": "pslld $3, %xmm1",
+      "hex": "660f72f103"
+    },
+    {
+      "asm": "pslld %xmm2, %xmm1",
+      "hex": "660ff2ca"
+    },
+    {
+      "asm": "pslld 16(%eax), %xmm1",
+      "hex": "660ff24810"
+    },
+    {
+      "asm": "psllq $3, %xmm1",
+      "hex": "660f73f103"
+    },
+    {
+      "asm": "psllq %xmm2, %xmm1",
+      "hex": "660ff3ca"
+    },
+    {
+      "asm": "psllq 16(%eax), %xmm1",
+      "hex": "660ff34810"
+    },
+    {
+      "asm": "psraw $3, %xmm1",
+      "hex": "660f71e103"
+    },
+    {
+      "asm": "psraw %xmm2, %xmm1",
+      "hex": "660fe1ca"
+    },
+    {
+      "asm": "psraw 16(%eax), %xmm1",
+      "hex": "660fe14810"
+    },
+    {
+      "asm": "psrad $3, %xmm1",
+      "hex": "660f72e103"
+    },
+    {
+      "asm": "psrad %xmm2, %xmm1",
+      "hex": "660fe2ca"
+    },
+    {
+      "asm": "psrad 16(%eax), %xmm1",
+      "hex": "660fe24810"
+    },
+    {
+      "asm": "psrlw $3, %xmm1",
+      "hex": "660f71d103"
+    },
+    {
+      "asm": "psrlw %xmm2, %xmm1",
+      "hex": "660fd1ca"
+    },
+    {
+      "asm": "psrlw 16(%eax), %xmm1",
+      "hex": "660fd14810"
+    },
+    {
+      "asm": "psrld $3, %xmm1",
+      "hex": "660f72d103"
+    },
+    {
+      "asm": "psrld %xmm2, %xmm1",
+      "hex": "660fd2ca"
+    },
+    {
+      "asm": "psrld 16(%eax), %xmm1",
+      "hex": "660fd24810"
+    },
+    {
+      "asm": "psrlq $3, %xmm1",
+      "hex": "660f73d103"
+    },
+    {
+      "asm": "psrlq %xmm2, %xmm1",
+      "hex": "660fd3ca"
+    },
+    {
+      "asm": "psrlq 16(%eax), %xmm1",
+      "hex": "660fd34810"
+    },
+    {
+      "asm": "pinsrw $3, %ecx, %xmm1",
+      "hex": "660fc4c903"
+    },
+    {
+      "asm": "pinsrw $3, 16(%eax), %xmm1",
+      "hex": "660fc4481003"
+    },
+    {
+      "asm": "pextrw $3, %xmm2, %ecx",
+      "hex": "660fc5ca03"
+    },
+    {
+      "asm": "pmovmskb %xmm2, %ecx",
+      "hex": "660fd7ca"
+    },
+    {
+      "asm": "movd %ecx, %xmm1",
+      "hex": "660f6ec9"
+    },
+    {
+      "asm": "movd %xmm1, %ecx",
+      "hex": "660f7ec9"
+    },
+    {
+      "asm": "psrldq $3, %xmm1",
+      "hex": "660f73d903"
+    },
+    {
+      "asm": "pslldq $3, %xmm1",
+      "hex": "660f73f903"
+    },
+    {
+      "asm": "pshufw $27, %mm2, %mm1",
+      "hex": "0f70ca1b"
+    },
+    {
+      "asm": "pshufw $27, 16(%eax), %mm1",
+      "hex": "0f7048101b"
+    },
+    {
+      "asm": "cvtpi2ps %mm2, %xmm1",
+      "hex": "0f2aca"
+    },
+    {
+      "asm": "cvtpi2ps 16(%eax), %xmm1",
+      "hex": "0f2a4810"
+    },
+    {
+      "asm": "cvtps2pi %xmm2, %mm1",
+      "hex": "0f2dca"
+    },
+    {
+      "asm": "cvtps2pi 16(%eax), %mm1",
+      "hex": "0f2d4810"
+    },
+    {
+      "asm": "cvttps2pi %xmm2, %mm1",
+      "hex": "0f2cca"
+    },
+    {
+      "asm": "cvttps2pi 16(%eax), %mm1",
+      "hex": "0f2c4810"
+    },
+    {
+      "asm": "movmskps %xmm2, %ecx",
+      "hex": "0f50ca"
+    },
+    {
+      "asm": "cvtpi2pd %mm2, %xmm1",
+      "hex": "660f2aca"
+    },
+    {
+      "asm": "cvtpi2pd 16(%eax), %xmm1",
+      "hex": "660f2a4810"
+    },
+    {
+      "asm": "cvtpd2pi %xmm2, %mm1",
+      "hex": "660f2dca"
+    },
+    {
+      "asm": "cvtpd2pi 16(%eax), %mm1",
+      "hex": "660f2d4810"
+    },
+    {
+      "asm": "cvttpd2pi %xmm2, %mm1",
+      "hex": "660f2cca"
+    },
+    {
+      "asm": "cvttpd2pi 16(%eax), %mm1",
+      "hex": "660f2c4810"
+    },
+    {
+      "asm": "movmskpd %xmm2, %ecx",
+      "hex": "660f50ca"
+    },
+    {
+      "asm": "movq2dq %mm2, %xmm1",
+      "hex": "f30fd6ca"
+    },
+    {
+      "asm": "movdq2q %xmm2, %mm1",
+      "hex": "f20fd6ca"
+    },
+    {
+      "asm": "movntps %xmm1, 16(%eax)",
+      "hex": "0f2b4810"
+    },
+    {
+      "asm": "movntpd %xmm1, 16(%eax)",
+      "hex": "660f2b4810"
+    },
+    {
+      "asm": "movntdq %xmm1, 16(%eax)",
+      "hex": "660fe74810"
+    },
+    {
+      "asm": "movntq %mm1, 16(%eax)",
+      "hex": "0fe74810"
+    },
+    {
+      "asm": "movnti %ecx, 16(%eax)",
+      "hex": "0fc34810"
+    },
+    {
+      "asm": "movntil %ecx, 16(%eax)",
+      "hex": "0fc34810"
+    },
+    {
+      "asm": "ldmxcsr 16(%eax)",
+      "hex": "0fae5010"
+    },
+    {
+      "asm": "stmxcsr 16(%eax)",
+      "hex": "0fae5810"
+    },
+    {
+      "asm": "prefetchnta 16(%eax)",
+      "hex": "0f184010"
+    },
+    {
+      "asm": "prefetcht0 16(%eax)",
+      "hex": "0f184810"
+    },
+    {
+      "asm": "prefetcht1 16(%eax)",
+      "hex": "0f185010"
+    },
+    {
+      "asm": "prefetcht2 16(%eax)",
+      "hex": "0f185810"
+    },
+    {
+      "asm": "clflush 16(%eax)",
+      "hex": "0fae7810"
+    },
+    {
+      "asm": "lfence",
+      "hex": "0faee8"
+    },
+    {
+      "asm": "mfence",
+      "hex": "0faef0"
+    },
+    {
+      "asm": "sfence",
+      "hex": "0faef8"
+    }
+  ],
+  "x64": [
+    {
+      "asm": "addps %xmm2, %xmm1",
+      "hex": "0f58ca"
+    },
+    {
+      "asm": "addps 16(%rax), %xmm1",
+      "hex": "0f584810"
+    },
+    {
+      "asm": "addps %xmm10, %xmm9",
+      "hex": "450f58ca"
+    },
+    {
+      "asm": "addps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f587cac20"
+    },
+    {
+      "asm": "mulps %xmm2, %xmm1",
+      "hex": "0f59ca"
+    },
+    {
+      "asm": "mulps 16(%rax), %xmm1",
+      "hex": "0f594810"
+    },
+    {
+      "asm": "mulps %xmm10, %xmm9",
+      "hex": "450f59ca"
+    },
+    {
+      "asm": "mulps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f597cac20"
+    },
+    {
+      "asm": "subps %xmm2, %xmm1",
+      "hex": "0f5cca"
+    },
+    {
+      "asm": "subps 16(%rax), %xmm1",
+      "hex": "0f5c4810"
+    },
+    {
+      "asm": "subps %xmm10, %xmm9",
+      "hex": "450f5cca"
+    },
+    {
+      "asm": "subps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f5c7cac20"
+    },
+    {
+      "asm": "minps %xmm2, %xmm1",
+      "hex": "0f5dca"
+    },
+    {
+      "asm": "minps 16(%rax), %xmm1",
+      "hex": "0f5d4810"
+    },
+    {
+      "asm": "minps %xmm10, %xmm9",
+      "hex": "450f5dca"
+    },
+    {
+      "asm": "minps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f5d7cac20"
+    },
+    {
+      "asm": "divps %xmm2, %xmm1",
+      "hex": "0f5eca"
+    },
+    {
+      "asm": "divps 16(%rax), %xmm1",
+      "hex": "0f5e4810"
+    },
+    {
+      "asm": "divps %xmm10, %xmm9",
+      "hex": "450f5eca"
+    },
+    {
+      "asm": "divps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f5e7cac20"
+    },
+    {
+      "asm": "maxps %xmm2, %xmm1",
+      "hex": "0f5fca"
+    },
+    {
+      "asm": "maxps 16(%rax), %xmm1",
+      "hex": "0f5f4810"
+    },
+    {
+      "asm": "maxps %xmm10, %xmm9",
+      "hex": "450f5fca"
+    },
+    {
+      "asm": "maxps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f5f7cac20"
+    },
+    {
+      "asm": "sqrtps %xmm2, %xmm1",
+      "hex": "0f51ca"
+    },
+    {
+      "asm": "sqrtps 16(%rax), %xmm1",
+      "hex": "0f514810"
+    },
+    {
+      "asm": "sqrtps %xmm10, %xmm9",
+      "hex": "450f51ca"
+    },
+    {
+      "asm": "sqrtps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f517cac20"
+    },
+    {
+      "asm": "addss %xmm2, %xmm1",
+      "hex": "f30f58ca"
+    },
+    {
+      "asm": "addss 16(%rax), %xmm1",
+      "hex": "f30f584810"
+    },
+    {
+      "asm": "addss %xmm10, %xmm9",
+      "hex": "f3450f58ca"
+    },
+    {
+      "asm": "addss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f587cac20"
+    },
+    {
+      "asm": "mulss %xmm2, %xmm1",
+      "hex": "f30f59ca"
+    },
+    {
+      "asm": "mulss 16(%rax), %xmm1",
+      "hex": "f30f594810"
+    },
+    {
+      "asm": "mulss %xmm10, %xmm9",
+      "hex": "f3450f59ca"
+    },
+    {
+      "asm": "mulss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f597cac20"
+    },
+    {
+      "asm": "subss %xmm2, %xmm1",
+      "hex": "f30f5cca"
+    },
+    {
+      "asm": "subss 16(%rax), %xmm1",
+      "hex": "f30f5c4810"
+    },
+    {
+      "asm": "subss %xmm10, %xmm9",
+      "hex": "f3450f5cca"
+    },
+    {
+      "asm": "subss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f5c7cac20"
+    },
+    {
+      "asm": "minss %xmm2, %xmm1",
+      "hex": "f30f5dca"
+    },
+    {
+      "asm": "minss 16(%rax), %xmm1",
+      "hex": "f30f5d4810"
+    },
+    {
+      "asm": "minss %xmm10, %xmm9",
+      "hex": "f3450f5dca"
+    },
+    {
+      "asm": "minss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f5d7cac20"
+    },
+    {
+      "asm": "divss %xmm2, %xmm1",
+      "hex": "f30f5eca"
+    },
+    {
+      "asm": "divss 16(%rax), %xmm1",
+      "hex": "f30f5e4810"
+    },
+    {
+      "asm": "divss %xmm10, %xmm9",
+      "hex": "f3450f5eca"
+    },
+    {
+      "asm": "divss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f5e7cac20"
+    },
+    {
+      "asm": "maxss %xmm2, %xmm1",
+      "hex": "f30f5fca"
+    },
+    {
+      "asm": "maxss 16(%rax), %xmm1",
+      "hex": "f30f5f4810"
+    },
+    {
+      "asm": "maxss %xmm10, %xmm9",
+      "hex": "f3450f5fca"
+    },
+    {
+      "asm": "maxss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f5f7cac20"
+    },
+    {
+      "asm": "sqrtss %xmm2, %xmm1",
+      "hex": "f30f51ca"
+    },
+    {
+      "asm": "sqrtss 16(%rax), %xmm1",
+      "hex": "f30f514810"
+    },
+    {
+      "asm": "sqrtss %xmm10, %xmm9",
+      "hex": "f3450f51ca"
+    },
+    {
+      "asm": "sqrtss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f517cac20"
+    },
+    {
+      "asm": "addpd %xmm2, %xmm1",
+      "hex": "660f58ca"
+    },
+    {
+      "asm": "addpd 16(%rax), %xmm1",
+      "hex": "660f584810"
+    },
+    {
+      "asm": "addpd %xmm10, %xmm9",
+      "hex": "66450f58ca"
+    },
+    {
+      "asm": "addpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f587cac20"
+    },
+    {
+      "asm": "mulpd %xmm2, %xmm1",
+      "hex": "660f59ca"
+    },
+    {
+      "asm": "mulpd 16(%rax), %xmm1",
+      "hex": "660f594810"
+    },
+    {
+      "asm": "mulpd %xmm10, %xmm9",
+      "hex": "66450f59ca"
+    },
+    {
+      "asm": "mulpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f597cac20"
+    },
+    {
+      "asm": "subpd %xmm2, %xmm1",
+      "hex": "660f5cca"
+    },
+    {
+      "asm": "subpd 16(%rax), %xmm1",
+      "hex": "660f5c4810"
+    },
+    {
+      "asm": "subpd %xmm10, %xmm9",
+      "hex": "66450f5cca"
+    },
+    {
+      "asm": "subpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f5c7cac20"
+    },
+    {
+      "asm": "minpd %xmm2, %xmm1",
+      "hex": "660f5dca"
+    },
+    {
+      "asm": "minpd 16(%rax), %xmm1",
+      "hex": "660f5d4810"
+    },
+    {
+      "asm": "minpd %xmm10, %xmm9",
+      "hex": "66450f5dca"
+    },
+    {
+      "asm": "minpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f5d7cac20"
+    },
+    {
+      "asm": "divpd %xmm2, %xmm1",
+      "hex": "660f5eca"
+    },
+    {
+      "asm": "divpd 16(%rax), %xmm1",
+      "hex": "660f5e4810"
+    },
+    {
+      "asm": "divpd %xmm10, %xmm9",
+      "hex": "66450f5eca"
+    },
+    {
+      "asm": "divpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f5e7cac20"
+    },
+    {
+      "asm": "maxpd %xmm2, %xmm1",
+      "hex": "660f5fca"
+    },
+    {
+      "asm": "maxpd 16(%rax), %xmm1",
+      "hex": "660f5f4810"
+    },
+    {
+      "asm": "maxpd %xmm10, %xmm9",
+      "hex": "66450f5fca"
+    },
+    {
+      "asm": "maxpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f5f7cac20"
+    },
+    {
+      "asm": "sqrtpd %xmm2, %xmm1",
+      "hex": "660f51ca"
+    },
+    {
+      "asm": "sqrtpd 16(%rax), %xmm1",
+      "hex": "660f514810"
+    },
+    {
+      "asm": "sqrtpd %xmm10, %xmm9",
+      "hex": "66450f51ca"
+    },
+    {
+      "asm": "sqrtpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f517cac20"
+    },
+    {
+      "asm": "addsd %xmm2, %xmm1",
+      "hex": "f20f58ca"
+    },
+    {
+      "asm": "addsd 16(%rax), %xmm1",
+      "hex": "f20f584810"
+    },
+    {
+      "asm": "addsd %xmm10, %xmm9",
+      "hex": "f2450f58ca"
+    },
+    {
+      "asm": "addsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f587cac20"
+    },
+    {
+      "asm": "mulsd %xmm2, %xmm1",
+      "hex": "f20f59ca"
+    },
+    {
+      "asm": "mulsd 16(%rax), %xmm1",
+      "hex": "f20f594810"
+    },
+    {
+      "asm": "mulsd %xmm10, %xmm9",
+      "hex": "f2450f59ca"
+    },
+    {
+      "asm": "mulsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f597cac20"
+    },
+    {
+      "asm": "subsd %xmm2, %xmm1",
+      "hex": "f20f5cca"
+    },
+    {
+      "asm": "subsd 16(%rax), %xmm1",
+      "hex": "f20f5c4810"
+    },
+    {
+      "asm": "subsd %xmm10, %xmm9",
+      "hex": "f2450f5cca"
+    },
+    {
+      "asm": "subsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f5c7cac20"
+    },
+    {
+      "asm": "minsd %xmm2, %xmm1",
+      "hex": "f20f5dca"
+    },
+    {
+      "asm": "minsd 16(%rax), %xmm1",
+      "hex": "f20f5d4810"
+    },
+    {
+      "asm": "minsd %xmm10, %xmm9",
+      "hex": "f2450f5dca"
+    },
+    {
+      "asm": "minsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f5d7cac20"
+    },
+    {
+      "asm": "divsd %xmm2, %xmm1",
+      "hex": "f20f5eca"
+    },
+    {
+      "asm": "divsd 16(%rax), %xmm1",
+      "hex": "f20f5e4810"
+    },
+    {
+      "asm": "divsd %xmm10, %xmm9",
+      "hex": "f2450f5eca"
+    },
+    {
+      "asm": "divsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f5e7cac20"
+    },
+    {
+      "asm": "maxsd %xmm2, %xmm1",
+      "hex": "f20f5fca"
+    },
+    {
+      "asm": "maxsd 16(%rax), %xmm1",
+      "hex": "f20f5f4810"
+    },
+    {
+      "asm": "maxsd %xmm10, %xmm9",
+      "hex": "f2450f5fca"
+    },
+    {
+      "asm": "maxsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f5f7cac20"
+    },
+    {
+      "asm": "sqrtsd %xmm2, %xmm1",
+      "hex": "f20f51ca"
+    },
+    {
+      "asm": "sqrtsd 16(%rax), %xmm1",
+      "hex": "f20f514810"
+    },
+    {
+      "asm": "sqrtsd %xmm10, %xmm9",
+      "hex": "f2450f51ca"
+    },
+    {
+      "asm": "sqrtsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f517cac20"
+    },
+    {
+      "asm": "andps %xmm2, %xmm1",
+      "hex": "0f54ca"
+    },
+    {
+      "asm": "andps 16(%rax), %xmm1",
+      "hex": "0f544810"
+    },
+    {
+      "asm": "andps %xmm10, %xmm9",
+      "hex": "450f54ca"
+    },
+    {
+      "asm": "andps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f547cac20"
+    },
+    {
+      "asm": "andnps %xmm2, %xmm1",
+      "hex": "0f55ca"
+    },
+    {
+      "asm": "andnps 16(%rax), %xmm1",
+      "hex": "0f554810"
+    },
+    {
+      "asm": "andnps %xmm10, %xmm9",
+      "hex": "450f55ca"
+    },
+    {
+      "asm": "andnps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f557cac20"
+    },
+    {
+      "asm": "orps %xmm2, %xmm1",
+      "hex": "0f56ca"
+    },
+    {
+      "asm": "orps 16(%rax), %xmm1",
+      "hex": "0f564810"
+    },
+    {
+      "asm": "orps %xmm10, %xmm9",
+      "hex": "450f56ca"
+    },
+    {
+      "asm": "orps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f567cac20"
+    },
+    {
+      "asm": "xorps %xmm2, %xmm1",
+      "hex": "0f57ca"
+    },
+    {
+      "asm": "xorps 16(%rax), %xmm1",
+      "hex": "0f574810"
+    },
+    {
+      "asm": "xorps %xmm10, %xmm9",
+      "hex": "450f57ca"
+    },
+    {
+      "asm": "xorps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f577cac20"
+    },
+    {
+      "asm": "unpcklps %xmm2, %xmm1",
+      "hex": "0f14ca"
+    },
+    {
+      "asm": "unpcklps 16(%rax), %xmm1",
+      "hex": "0f144810"
+    },
+    {
+      "asm": "unpcklps %xmm10, %xmm9",
+      "hex": "450f14ca"
+    },
+    {
+      "asm": "unpcklps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f147cac20"
+    },
+    {
+      "asm": "unpckhps %xmm2, %xmm1",
+      "hex": "0f15ca"
+    },
+    {
+      "asm": "unpckhps 16(%rax), %xmm1",
+      "hex": "0f154810"
+    },
+    {
+      "asm": "unpckhps %xmm10, %xmm9",
+      "hex": "450f15ca"
+    },
+    {
+      "asm": "unpckhps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f157cac20"
+    },
+    {
+      "asm": "andpd %xmm2, %xmm1",
+      "hex": "660f54ca"
+    },
+    {
+      "asm": "andpd 16(%rax), %xmm1",
+      "hex": "660f544810"
+    },
+    {
+      "asm": "andpd %xmm10, %xmm9",
+      "hex": "66450f54ca"
+    },
+    {
+      "asm": "andpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f547cac20"
+    },
+    {
+      "asm": "andnpd %xmm2, %xmm1",
+      "hex": "660f55ca"
+    },
+    {
+      "asm": "andnpd 16(%rax), %xmm1",
+      "hex": "660f554810"
+    },
+    {
+      "asm": "andnpd %xmm10, %xmm9",
+      "hex": "66450f55ca"
+    },
+    {
+      "asm": "andnpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f557cac20"
+    },
+    {
+      "asm": "orpd %xmm2, %xmm1",
+      "hex": "660f56ca"
+    },
+    {
+      "asm": "orpd 16(%rax), %xmm1",
+      "hex": "660f564810"
+    },
+    {
+      "asm": "orpd %xmm10, %xmm9",
+      "hex": "66450f56ca"
+    },
+    {
+      "asm": "orpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f567cac20"
+    },
+    {
+      "asm": "xorpd %xmm2, %xmm1",
+      "hex": "660f57ca"
+    },
+    {
+      "asm": "xorpd 16(%rax), %xmm1",
+      "hex": "660f574810"
+    },
+    {
+      "asm": "xorpd %xmm10, %xmm9",
+      "hex": "66450f57ca"
+    },
+    {
+      "asm": "xorpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f577cac20"
+    },
+    {
+      "asm": "unpcklpd %xmm2, %xmm1",
+      "hex": "660f14ca"
+    },
+    {
+      "asm": "unpcklpd 16(%rax), %xmm1",
+      "hex": "660f144810"
+    },
+    {
+      "asm": "unpcklpd %xmm10, %xmm9",
+      "hex": "66450f14ca"
+    },
+    {
+      "asm": "unpcklpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f147cac20"
+    },
+    {
+      "asm": "unpckhpd %xmm2, %xmm1",
+      "hex": "660f15ca"
+    },
+    {
+      "asm": "unpckhpd 16(%rax), %xmm1",
+      "hex": "660f154810"
+    },
+    {
+      "asm": "unpckhpd %xmm10, %xmm9",
+      "hex": "66450f15ca"
+    },
+    {
+      "asm": "unpckhpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f157cac20"
+    },
+    {
+      "asm": "rcpps %xmm2, %xmm1",
+      "hex": "0f53ca"
+    },
+    {
+      "asm": "rcpps 16(%rax), %xmm1",
+      "hex": "0f534810"
+    },
+    {
+      "asm": "rcpps %xmm10, %xmm9",
+      "hex": "450f53ca"
+    },
+    {
+      "asm": "rcpps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f537cac20"
+    },
+    {
+      "asm": "rcpss %xmm2, %xmm1",
+      "hex": "f30f53ca"
+    },
+    {
+      "asm": "rcpss 16(%rax), %xmm1",
+      "hex": "f30f534810"
+    },
+    {
+      "asm": "rcpss %xmm10, %xmm9",
+      "hex": "f3450f53ca"
+    },
+    {
+      "asm": "rcpss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f537cac20"
+    },
+    {
+      "asm": "rsqrtps %xmm2, %xmm1",
+      "hex": "0f52ca"
+    },
+    {
+      "asm": "rsqrtps 16(%rax), %xmm1",
+      "hex": "0f524810"
+    },
+    {
+      "asm": "rsqrtps %xmm10, %xmm9",
+      "hex": "450f52ca"
+    },
+    {
+      "asm": "rsqrtps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f527cac20"
+    },
+    {
+      "asm": "rsqrtss %xmm2, %xmm1",
+      "hex": "f30f52ca"
+    },
+    {
+      "asm": "rsqrtss 16(%rax), %xmm1",
+      "hex": "f30f524810"
+    },
+    {
+      "asm": "rsqrtss %xmm10, %xmm9",
+      "hex": "f3450f52ca"
+    },
+    {
+      "asm": "rsqrtss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f527cac20"
+    },
+    {
+      "asm": "comiss %xmm2, %xmm1",
+      "hex": "0f2fca"
+    },
+    {
+      "asm": "comiss 16(%rax), %xmm1",
+      "hex": "0f2f4810"
+    },
+    {
+      "asm": "comiss %xmm10, %xmm9",
+      "hex": "450f2fca"
+    },
+    {
+      "asm": "comiss 32(%r12,%r13,4), %xmm15",
+      "hex": "470f2f7cac20"
+    },
+    {
+      "asm": "ucomiss %xmm2, %xmm1",
+      "hex": "0f2eca"
+    },
+    {
+      "asm": "ucomiss 16(%rax), %xmm1",
+      "hex": "0f2e4810"
+    },
+    {
+      "asm": "ucomiss %xmm10, %xmm9",
+      "hex": "450f2eca"
+    },
+    {
+      "asm": "ucomiss 32(%r12,%r13,4), %xmm15",
+      "hex": "470f2e7cac20"
+    },
+    {
+      "asm": "comisd %xmm2, %xmm1",
+      "hex": "660f2fca"
+    },
+    {
+      "asm": "comisd 16(%rax), %xmm1",
+      "hex": "660f2f4810"
+    },
+    {
+      "asm": "comisd %xmm10, %xmm9",
+      "hex": "66450f2fca"
+    },
+    {
+      "asm": "comisd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f2f7cac20"
+    },
+    {
+      "asm": "ucomisd %xmm2, %xmm1",
+      "hex": "660f2eca"
+    },
+    {
+      "asm": "ucomisd 16(%rax), %xmm1",
+      "hex": "660f2e4810"
+    },
+    {
+      "asm": "ucomisd %xmm10, %xmm9",
+      "hex": "66450f2eca"
+    },
+    {
+      "asm": "ucomisd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f2e7cac20"
+    },
+    {
+      "asm": "cvtps2pd %xmm2, %xmm1",
+      "hex": "0f5aca"
+    },
+    {
+      "asm": "cvtps2pd 16(%rax), %xmm1",
+      "hex": "0f5a4810"
+    },
+    {
+      "asm": "cvtps2pd %xmm10, %xmm9",
+      "hex": "450f5aca"
+    },
+    {
+      "asm": "cvtps2pd 32(%r12,%r13,4), %xmm15",
+      "hex": "470f5a7cac20"
+    },
+    {
+      "asm": "cvtpd2ps %xmm2, %xmm1",
+      "hex": "660f5aca"
+    },
+    {
+      "asm": "cvtpd2ps 16(%rax), %xmm1",
+      "hex": "660f5a4810"
+    },
+    {
+      "asm": "cvtpd2ps %xmm10, %xmm9",
+      "hex": "66450f5aca"
+    },
+    {
+      "asm": "cvtpd2ps 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f5a7cac20"
+    },
+    {
+      "asm": "cvtss2sd %xmm2, %xmm1",
+      "hex": "f30f5aca"
+    },
+    {
+      "asm": "cvtss2sd 16(%rax), %xmm1",
+      "hex": "f30f5a4810"
+    },
+    {
+      "asm": "cvtss2sd %xmm10, %xmm9",
+      "hex": "f3450f5aca"
+    },
+    {
+      "asm": "cvtss2sd 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f5a7cac20"
+    },
+    {
+      "asm": "cvtsd2ss %xmm2, %xmm1",
+      "hex": "f20f5aca"
+    },
+    {
+      "asm": "cvtsd2ss 16(%rax), %xmm1",
+      "hex": "f20f5a4810"
+    },
+    {
+      "asm": "cvtsd2ss %xmm10, %xmm9",
+      "hex": "f2450f5aca"
+    },
+    {
+      "asm": "cvtsd2ss 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f5a7cac20"
+    },
+    {
+      "asm": "cvtdq2ps %xmm2, %xmm1",
+      "hex": "0f5bca"
+    },
+    {
+      "asm": "cvtdq2ps 16(%rax), %xmm1",
+      "hex": "0f5b4810"
+    },
+    {
+      "asm": "cvtdq2ps %xmm10, %xmm9",
+      "hex": "450f5bca"
+    },
+    {
+      "asm": "cvtdq2ps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f5b7cac20"
+    },
+    {
+      "asm": "cvtps2dq %xmm2, %xmm1",
+      "hex": "660f5bca"
+    },
+    {
+      "asm": "cvtps2dq 16(%rax), %xmm1",
+      "hex": "660f5b4810"
+    },
+    {
+      "asm": "cvtps2dq %xmm10, %xmm9",
+      "hex": "66450f5bca"
+    },
+    {
+      "asm": "cvtps2dq 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f5b7cac20"
+    },
+    {
+      "asm": "cvttps2dq %xmm2, %xmm1",
+      "hex": "f30f5bca"
+    },
+    {
+      "asm": "cvttps2dq 16(%rax), %xmm1",
+      "hex": "f30f5b4810"
+    },
+    {
+      "asm": "cvttps2dq %xmm10, %xmm9",
+      "hex": "f3450f5bca"
+    },
+    {
+      "asm": "cvttps2dq 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f5b7cac20"
+    },
+    {
+      "asm": "cvtdq2pd %xmm2, %xmm1",
+      "hex": "f30fe6ca"
+    },
+    {
+      "asm": "cvtdq2pd 16(%rax), %xmm1",
+      "hex": "f30fe64810"
+    },
+    {
+      "asm": "cvtdq2pd %xmm10, %xmm9",
+      "hex": "f3450fe6ca"
+    },
+    {
+      "asm": "cvtdq2pd 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fe67cac20"
+    },
+    {
+      "asm": "cvtpd2dq %xmm2, %xmm1",
+      "hex": "f20fe6ca"
+    },
+    {
+      "asm": "cvtpd2dq 16(%rax), %xmm1",
+      "hex": "f20fe64810"
+    },
+    {
+      "asm": "cvtpd2dq %xmm10, %xmm9",
+      "hex": "f2450fe6ca"
+    },
+    {
+      "asm": "cvtpd2dq 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fe67cac20"
+    },
+    {
+      "asm": "cvttpd2dq %xmm2, %xmm1",
+      "hex": "660fe6ca"
+    },
+    {
+      "asm": "cvttpd2dq 16(%rax), %xmm1",
+      "hex": "660fe64810"
+    },
+    {
+      "asm": "cvttpd2dq %xmm10, %xmm9",
+      "hex": "66450fe6ca"
+    },
+    {
+      "asm": "cvttpd2dq 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fe67cac20"
+    },
+    {
+      "asm": "punpcklqdq %xmm2, %xmm1",
+      "hex": "660f6cca"
+    },
+    {
+      "asm": "punpcklqdq 16(%rax), %xmm1",
+      "hex": "660f6c4810"
+    },
+    {
+      "asm": "punpcklqdq %xmm10, %xmm9",
+      "hex": "66450f6cca"
+    },
+    {
+      "asm": "punpcklqdq 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f6c7cac20"
+    },
+    {
+      "asm": "punpckhqdq %xmm2, %xmm1",
+      "hex": "660f6dca"
+    },
+    {
+      "asm": "punpckhqdq 16(%rax), %xmm1",
+      "hex": "660f6d4810"
+    },
+    {
+      "asm": "punpckhqdq %xmm10, %xmm9",
+      "hex": "66450f6dca"
+    },
+    {
+      "asm": "punpckhqdq 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f6d7cac20"
+    },
+    {
+      "asm": "cmpeqps %xmm2, %xmm1",
+      "hex": "0fc2ca00"
+    },
+    {
+      "asm": "cmpeqps 16(%rax), %xmm1",
+      "hex": "0fc2481000"
+    },
+    {
+      "asm": "cmpeqps %xmm10, %xmm9",
+      "hex": "450fc2ca00"
+    },
+    {
+      "asm": "cmpeqps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2000"
+    },
+    {
+      "asm": "cmpltps %xmm2, %xmm1",
+      "hex": "0fc2ca01"
+    },
+    {
+      "asm": "cmpltps 16(%rax), %xmm1",
+      "hex": "0fc2481001"
+    },
+    {
+      "asm": "cmpltps %xmm10, %xmm9",
+      "hex": "450fc2ca01"
+    },
+    {
+      "asm": "cmpltps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2001"
+    },
+    {
+      "asm": "cmpleps %xmm2, %xmm1",
+      "hex": "0fc2ca02"
+    },
+    {
+      "asm": "cmpleps 16(%rax), %xmm1",
+      "hex": "0fc2481002"
+    },
+    {
+      "asm": "cmpleps %xmm10, %xmm9",
+      "hex": "450fc2ca02"
+    },
+    {
+      "asm": "cmpleps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2002"
+    },
+    {
+      "asm": "cmpunordps %xmm2, %xmm1",
+      "hex": "0fc2ca03"
+    },
+    {
+      "asm": "cmpunordps 16(%rax), %xmm1",
+      "hex": "0fc2481003"
+    },
+    {
+      "asm": "cmpunordps %xmm10, %xmm9",
+      "hex": "450fc2ca03"
+    },
+    {
+      "asm": "cmpunordps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2003"
+    },
+    {
+      "asm": "cmpneqps %xmm2, %xmm1",
+      "hex": "0fc2ca04"
+    },
+    {
+      "asm": "cmpneqps 16(%rax), %xmm1",
+      "hex": "0fc2481004"
+    },
+    {
+      "asm": "cmpneqps %xmm10, %xmm9",
+      "hex": "450fc2ca04"
+    },
+    {
+      "asm": "cmpneqps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2004"
+    },
+    {
+      "asm": "cmpnltps %xmm2, %xmm1",
+      "hex": "0fc2ca05"
+    },
+    {
+      "asm": "cmpnltps 16(%rax), %xmm1",
+      "hex": "0fc2481005"
+    },
+    {
+      "asm": "cmpnltps %xmm10, %xmm9",
+      "hex": "450fc2ca05"
+    },
+    {
+      "asm": "cmpnltps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2005"
+    },
+    {
+      "asm": "cmpnleps %xmm2, %xmm1",
+      "hex": "0fc2ca06"
+    },
+    {
+      "asm": "cmpnleps 16(%rax), %xmm1",
+      "hex": "0fc2481006"
+    },
+    {
+      "asm": "cmpnleps %xmm10, %xmm9",
+      "hex": "450fc2ca06"
+    },
+    {
+      "asm": "cmpnleps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2006"
+    },
+    {
+      "asm": "cmpordps %xmm2, %xmm1",
+      "hex": "0fc2ca07"
+    },
+    {
+      "asm": "cmpordps 16(%rax), %xmm1",
+      "hex": "0fc2481007"
+    },
+    {
+      "asm": "cmpordps %xmm10, %xmm9",
+      "hex": "450fc2ca07"
+    },
+    {
+      "asm": "cmpordps 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2007"
+    },
+    {
+      "asm": "cmpeqss %xmm2, %xmm1",
+      "hex": "f30fc2ca00"
+    },
+    {
+      "asm": "cmpeqss 16(%rax), %xmm1",
+      "hex": "f30fc2481000"
+    },
+    {
+      "asm": "cmpeqss %xmm10, %xmm9",
+      "hex": "f3450fc2ca00"
+    },
+    {
+      "asm": "cmpeqss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2000"
+    },
+    {
+      "asm": "cmpltss %xmm2, %xmm1",
+      "hex": "f30fc2ca01"
+    },
+    {
+      "asm": "cmpltss 16(%rax), %xmm1",
+      "hex": "f30fc2481001"
+    },
+    {
+      "asm": "cmpltss %xmm10, %xmm9",
+      "hex": "f3450fc2ca01"
+    },
+    {
+      "asm": "cmpltss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2001"
+    },
+    {
+      "asm": "cmpless %xmm2, %xmm1",
+      "hex": "f30fc2ca02"
+    },
+    {
+      "asm": "cmpless 16(%rax), %xmm1",
+      "hex": "f30fc2481002"
+    },
+    {
+      "asm": "cmpless %xmm10, %xmm9",
+      "hex": "f3450fc2ca02"
+    },
+    {
+      "asm": "cmpless 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2002"
+    },
+    {
+      "asm": "cmpunordss %xmm2, %xmm1",
+      "hex": "f30fc2ca03"
+    },
+    {
+      "asm": "cmpunordss 16(%rax), %xmm1",
+      "hex": "f30fc2481003"
+    },
+    {
+      "asm": "cmpunordss %xmm10, %xmm9",
+      "hex": "f3450fc2ca03"
+    },
+    {
+      "asm": "cmpunordss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2003"
+    },
+    {
+      "asm": "cmpneqss %xmm2, %xmm1",
+      "hex": "f30fc2ca04"
+    },
+    {
+      "asm": "cmpneqss 16(%rax), %xmm1",
+      "hex": "f30fc2481004"
+    },
+    {
+      "asm": "cmpneqss %xmm10, %xmm9",
+      "hex": "f3450fc2ca04"
+    },
+    {
+      "asm": "cmpneqss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2004"
+    },
+    {
+      "asm": "cmpnltss %xmm2, %xmm1",
+      "hex": "f30fc2ca05"
+    },
+    {
+      "asm": "cmpnltss 16(%rax), %xmm1",
+      "hex": "f30fc2481005"
+    },
+    {
+      "asm": "cmpnltss %xmm10, %xmm9",
+      "hex": "f3450fc2ca05"
+    },
+    {
+      "asm": "cmpnltss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2005"
+    },
+    {
+      "asm": "cmpnless %xmm2, %xmm1",
+      "hex": "f30fc2ca06"
+    },
+    {
+      "asm": "cmpnless 16(%rax), %xmm1",
+      "hex": "f30fc2481006"
+    },
+    {
+      "asm": "cmpnless %xmm10, %xmm9",
+      "hex": "f3450fc2ca06"
+    },
+    {
+      "asm": "cmpnless 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2006"
+    },
+    {
+      "asm": "cmpordss %xmm2, %xmm1",
+      "hex": "f30fc2ca07"
+    },
+    {
+      "asm": "cmpordss 16(%rax), %xmm1",
+      "hex": "f30fc2481007"
+    },
+    {
+      "asm": "cmpordss %xmm10, %xmm9",
+      "hex": "f3450fc2ca07"
+    },
+    {
+      "asm": "cmpordss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2007"
+    },
+    {
+      "asm": "cmpeqpd %xmm2, %xmm1",
+      "hex": "660fc2ca00"
+    },
+    {
+      "asm": "cmpeqpd 16(%rax), %xmm1",
+      "hex": "660fc2481000"
+    },
+    {
+      "asm": "cmpeqpd %xmm10, %xmm9",
+      "hex": "66450fc2ca00"
+    },
+    {
+      "asm": "cmpeqpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2000"
+    },
+    {
+      "asm": "cmpltpd %xmm2, %xmm1",
+      "hex": "660fc2ca01"
+    },
+    {
+      "asm": "cmpltpd 16(%rax), %xmm1",
+      "hex": "660fc2481001"
+    },
+    {
+      "asm": "cmpltpd %xmm10, %xmm9",
+      "hex": "66450fc2ca01"
+    },
+    {
+      "asm": "cmpltpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2001"
+    },
+    {
+      "asm": "cmplepd %xmm2, %xmm1",
+      "hex": "660fc2ca02"
+    },
+    {
+      "asm": "cmplepd 16(%rax), %xmm1",
+      "hex": "660fc2481002"
+    },
+    {
+      "asm": "cmplepd %xmm10, %xmm9",
+      "hex": "66450fc2ca02"
+    },
+    {
+      "asm": "cmplepd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2002"
+    },
+    {
+      "asm": "cmpunordpd %xmm2, %xmm1",
+      "hex": "660fc2ca03"
+    },
+    {
+      "asm": "cmpunordpd 16(%rax), %xmm1",
+      "hex": "660fc2481003"
+    },
+    {
+      "asm": "cmpunordpd %xmm10, %xmm9",
+      "hex": "66450fc2ca03"
+    },
+    {
+      "asm": "cmpunordpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2003"
+    },
+    {
+      "asm": "cmpneqpd %xmm2, %xmm1",
+      "hex": "660fc2ca04"
+    },
+    {
+      "asm": "cmpneqpd 16(%rax), %xmm1",
+      "hex": "660fc2481004"
+    },
+    {
+      "asm": "cmpneqpd %xmm10, %xmm9",
+      "hex": "66450fc2ca04"
+    },
+    {
+      "asm": "cmpneqpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2004"
+    },
+    {
+      "asm": "cmpnltpd %xmm2, %xmm1",
+      "hex": "660fc2ca05"
+    },
+    {
+      "asm": "cmpnltpd 16(%rax), %xmm1",
+      "hex": "660fc2481005"
+    },
+    {
+      "asm": "cmpnltpd %xmm10, %xmm9",
+      "hex": "66450fc2ca05"
+    },
+    {
+      "asm": "cmpnltpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2005"
+    },
+    {
+      "asm": "cmpnlepd %xmm2, %xmm1",
+      "hex": "660fc2ca06"
+    },
+    {
+      "asm": "cmpnlepd 16(%rax), %xmm1",
+      "hex": "660fc2481006"
+    },
+    {
+      "asm": "cmpnlepd %xmm10, %xmm9",
+      "hex": "66450fc2ca06"
+    },
+    {
+      "asm": "cmpnlepd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2006"
+    },
+    {
+      "asm": "cmpordpd %xmm2, %xmm1",
+      "hex": "660fc2ca07"
+    },
+    {
+      "asm": "cmpordpd 16(%rax), %xmm1",
+      "hex": "660fc2481007"
+    },
+    {
+      "asm": "cmpordpd %xmm10, %xmm9",
+      "hex": "66450fc2ca07"
+    },
+    {
+      "asm": "cmpordpd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2007"
+    },
+    {
+      "asm": "cmpeqsd %xmm2, %xmm1",
+      "hex": "f20fc2ca00"
+    },
+    {
+      "asm": "cmpeqsd 16(%rax), %xmm1",
+      "hex": "f20fc2481000"
+    },
+    {
+      "asm": "cmpeqsd %xmm10, %xmm9",
+      "hex": "f2450fc2ca00"
+    },
+    {
+      "asm": "cmpeqsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2000"
+    },
+    {
+      "asm": "cmpltsd %xmm2, %xmm1",
+      "hex": "f20fc2ca01"
+    },
+    {
+      "asm": "cmpltsd 16(%rax), %xmm1",
+      "hex": "f20fc2481001"
+    },
+    {
+      "asm": "cmpltsd %xmm10, %xmm9",
+      "hex": "f2450fc2ca01"
+    },
+    {
+      "asm": "cmpltsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2001"
+    },
+    {
+      "asm": "cmplesd %xmm2, %xmm1",
+      "hex": "f20fc2ca02"
+    },
+    {
+      "asm": "cmplesd 16(%rax), %xmm1",
+      "hex": "f20fc2481002"
+    },
+    {
+      "asm": "cmplesd %xmm10, %xmm9",
+      "hex": "f2450fc2ca02"
+    },
+    {
+      "asm": "cmplesd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2002"
+    },
+    {
+      "asm": "cmpunordsd %xmm2, %xmm1",
+      "hex": "f20fc2ca03"
+    },
+    {
+      "asm": "cmpunordsd 16(%rax), %xmm1",
+      "hex": "f20fc2481003"
+    },
+    {
+      "asm": "cmpunordsd %xmm10, %xmm9",
+      "hex": "f2450fc2ca03"
+    },
+    {
+      "asm": "cmpunordsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2003"
+    },
+    {
+      "asm": "cmpneqsd %xmm2, %xmm1",
+      "hex": "f20fc2ca04"
+    },
+    {
+      "asm": "cmpneqsd 16(%rax), %xmm1",
+      "hex": "f20fc2481004"
+    },
+    {
+      "asm": "cmpneqsd %xmm10, %xmm9",
+      "hex": "f2450fc2ca04"
+    },
+    {
+      "asm": "cmpneqsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2004"
+    },
+    {
+      "asm": "cmpnltsd %xmm2, %xmm1",
+      "hex": "f20fc2ca05"
+    },
+    {
+      "asm": "cmpnltsd 16(%rax), %xmm1",
+      "hex": "f20fc2481005"
+    },
+    {
+      "asm": "cmpnltsd %xmm10, %xmm9",
+      "hex": "f2450fc2ca05"
+    },
+    {
+      "asm": "cmpnltsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2005"
+    },
+    {
+      "asm": "cmpnlesd %xmm2, %xmm1",
+      "hex": "f20fc2ca06"
+    },
+    {
+      "asm": "cmpnlesd 16(%rax), %xmm1",
+      "hex": "f20fc2481006"
+    },
+    {
+      "asm": "cmpnlesd %xmm10, %xmm9",
+      "hex": "f2450fc2ca06"
+    },
+    {
+      "asm": "cmpnlesd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2006"
+    },
+    {
+      "asm": "cmpordsd %xmm2, %xmm1",
+      "hex": "f20fc2ca07"
+    },
+    {
+      "asm": "cmpordsd 16(%rax), %xmm1",
+      "hex": "f20fc2481007"
+    },
+    {
+      "asm": "cmpordsd %xmm10, %xmm9",
+      "hex": "f2450fc2ca07"
+    },
+    {
+      "asm": "cmpordsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2007"
+    },
+    {
+      "asm": "maskmovq %mm2, %mm1",
+      "hex": "0ff7ca"
+    },
+    {
+      "asm": "maskmovdqu %xmm2, %xmm1",
+      "hex": "660ff7ca"
+    },
+    {
+      "asm": "maskmovdqu %xmm10, %xmm9",
+      "hex": "66450ff7ca"
+    },
+    {
+      "asm": "movups %xmm2, %xmm1",
+      "hex": "0f10ca"
+    },
+    {
+      "asm": "movups 16(%rax), %xmm1",
+      "hex": "0f104810"
+    },
+    {
+      "asm": "movups %xmm10, %xmm9",
+      "hex": "450f10ca"
+    },
+    {
+      "asm": "movups 32(%r12,%r13,4), %xmm15",
+      "hex": "470f107cac20"
+    },
+    {
+      "asm": "movups %xmm3, 16(%rax)",
+      "hex": "0f115810"
+    },
+    {
+      "asm": "movups %xmm15, 32(%r12,%r13,4)",
+      "hex": "470f117cac20"
+    },
+    {
+      "asm": "movaps %xmm2, %xmm1",
+      "hex": "0f28ca"
+    },
+    {
+      "asm": "movaps 16(%rax), %xmm1",
+      "hex": "0f284810"
+    },
+    {
+      "asm": "movaps %xmm10, %xmm9",
+      "hex": "450f28ca"
+    },
+    {
+      "asm": "movaps 32(%r12,%r13,4), %xmm15",
+      "hex": "470f287cac20"
+    },
+    {
+      "asm": "movaps %xmm3, 16(%rax)",
+      "hex": "0f295810"
+    },
+    {
+      "asm": "movaps %xmm15, 32(%r12,%r13,4)",
+      "hex": "470f297cac20"
+    },
+    {
+      "asm": "movss %xmm2, %xmm1",
+      "hex": "f30f10ca"
+    },
+    {
+      "asm": "movss 16(%rax), %xmm1",
+      "hex": "f30f104810"
+    },
+    {
+      "asm": "movss %xmm10, %xmm9",
+      "hex": "f3450f10ca"
+    },
+    {
+      "asm": "movss 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f107cac20"
+    },
+    {
+      "asm": "movss %xmm3, 16(%rax)",
+      "hex": "f30f115810"
+    },
+    {
+      "asm": "movss %xmm15, 32(%r12,%r13,4)",
+      "hex": "f3470f117cac20"
+    },
+    {
+      "asm": "movupd %xmm2, %xmm1",
+      "hex": "660f10ca"
+    },
+    {
+      "asm": "movupd 16(%rax), %xmm1",
+      "hex": "660f104810"
+    },
+    {
+      "asm": "movupd %xmm10, %xmm9",
+      "hex": "66450f10ca"
+    },
+    {
+      "asm": "movupd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f107cac20"
+    },
+    {
+      "asm": "movupd %xmm3, 16(%rax)",
+      "hex": "660f115810"
+    },
+    {
+      "asm": "movupd %xmm15, 32(%r12,%r13,4)",
+      "hex": "66470f117cac20"
+    },
+    {
+      "asm": "movapd %xmm2, %xmm1",
+      "hex": "660f28ca"
+    },
+    {
+      "asm": "movapd 16(%rax), %xmm1",
+      "hex": "660f284810"
+    },
+    {
+      "asm": "movapd %xmm10, %xmm9",
+      "hex": "66450f28ca"
+    },
+    {
+      "asm": "movapd 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f287cac20"
+    },
+    {
+      "asm": "movapd %xmm3, 16(%rax)",
+      "hex": "660f295810"
+    },
+    {
+      "asm": "movapd %xmm15, 32(%r12,%r13,4)",
+      "hex": "66470f297cac20"
+    },
+    {
+      "asm": "movsd %xmm2, %xmm1",
+      "hex": "f20f10ca"
+    },
+    {
+      "asm": "movsd 16(%rax), %xmm1",
+      "hex": "f20f104810"
+    },
+    {
+      "asm": "movsd %xmm10, %xmm9",
+      "hex": "f2450f10ca"
+    },
+    {
+      "asm": "movsd 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f107cac20"
+    },
+    {
+      "asm": "movsd %xmm3, 16(%rax)",
+      "hex": "f20f115810"
+    },
+    {
+      "asm": "movsd %xmm15, 32(%r12,%r13,4)",
+      "hex": "f2470f117cac20"
+    },
+    {
+      "asm": "movdqu %xmm2, %xmm1",
+      "hex": "f30f6fca"
+    },
+    {
+      "asm": "movdqu 16(%rax), %xmm1",
+      "hex": "f30f6f4810"
+    },
+    {
+      "asm": "movdqu %xmm10, %xmm9",
+      "hex": "f3450f6fca"
+    },
+    {
+      "asm": "movdqu 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f6f7cac20"
+    },
+    {
+      "asm": "movdqu %xmm3, 16(%rax)",
+      "hex": "f30f7f5810"
+    },
+    {
+      "asm": "movdqu %xmm15, 32(%r12,%r13,4)",
+      "hex": "f3470f7f7cac20"
+    },
+    {
+      "asm": "movdqa %xmm2, %xmm1",
+      "hex": "660f6fca"
+    },
+    {
+      "asm": "movdqa 16(%rax), %xmm1",
+      "hex": "660f6f4810"
+    },
+    {
+      "asm": "movdqa %xmm10, %xmm9",
+      "hex": "66450f6fca"
+    },
+    {
+      "asm": "movdqa 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f6f7cac20"
+    },
+    {
+      "asm": "movdqa %xmm3, 16(%rax)",
+      "hex": "660f7f5810"
+    },
+    {
+      "asm": "movdqa %xmm15, 32(%r12,%r13,4)",
+      "hex": "66470f7f7cac20"
+    },
+    {
+      "asm": "movlps 16(%rax), %xmm1",
+      "hex": "0f124810"
+    },
+    {
+      "asm": "movlps %xmm1, 16(%rax)",
+      "hex": "0f134810"
+    },
+    {
+      "asm": "movhps 16(%rax), %xmm1",
+      "hex": "0f164810"
+    },
+    {
+      "asm": "movhps %xmm1, 16(%rax)",
+      "hex": "0f174810"
+    },
+    {
+      "asm": "movlpd 16(%rax), %xmm1",
+      "hex": "660f124810"
+    },
+    {
+      "asm": "movlpd %xmm1, 16(%rax)",
+      "hex": "660f134810"
+    },
+    {
+      "asm": "movhpd 16(%rax), %xmm1",
+      "hex": "660f164810"
+    },
+    {
+      "asm": "movhpd %xmm1, 16(%rax)",
+      "hex": "660f174810"
+    },
+    {
+      "asm": "movhlps %xmm2, %xmm1",
+      "hex": "0f12ca"
+    },
+    {
+      "asm": "movlhps %xmm2, %xmm1",
+      "hex": "0f16ca"
+    },
+    {
+      "asm": "cmpps $3, %xmm2, %xmm1",
+      "hex": "0fc2ca03"
+    },
+    {
+      "asm": "cmpps $3, 16(%rax), %xmm1",
+      "hex": "0fc2481003"
+    },
+    {
+      "asm": "cmpps $3, %xmm10, %xmm9",
+      "hex": "450fc2ca03"
+    },
+    {
+      "asm": "cmpps $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc27cac2003"
+    },
+    {
+      "asm": "cmpss $3, %xmm2, %xmm1",
+      "hex": "f30fc2ca03"
+    },
+    {
+      "asm": "cmpss $3, 16(%rax), %xmm1",
+      "hex": "f30fc2481003"
+    },
+    {
+      "asm": "cmpss $3, %xmm10, %xmm9",
+      "hex": "f3450fc2ca03"
+    },
+    {
+      "asm": "cmpss $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470fc27cac2003"
+    },
+    {
+      "asm": "cmppd $3, %xmm2, %xmm1",
+      "hex": "660fc2ca03"
+    },
+    {
+      "asm": "cmppd $3, 16(%rax), %xmm1",
+      "hex": "660fc2481003"
+    },
+    {
+      "asm": "cmppd $3, %xmm10, %xmm9",
+      "hex": "66450fc2ca03"
+    },
+    {
+      "asm": "cmppd $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc27cac2003"
+    },
+    {
+      "asm": "cmpsd $3, %xmm2, %xmm1",
+      "hex": "f20fc2ca03"
+    },
+    {
+      "asm": "cmpsd $3, 16(%rax), %xmm1",
+      "hex": "f20fc2481003"
+    },
+    {
+      "asm": "cmpsd $3, %xmm10, %xmm9",
+      "hex": "f2450fc2ca03"
+    },
+    {
+      "asm": "cmpsd $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470fc27cac2003"
+    },
+    {
+      "asm": "shufps $3, %xmm2, %xmm1",
+      "hex": "0fc6ca03"
+    },
+    {
+      "asm": "shufps $3, 16(%rax), %xmm1",
+      "hex": "0fc6481003"
+    },
+    {
+      "asm": "shufps $3, %xmm10, %xmm9",
+      "hex": "450fc6ca03"
+    },
+    {
+      "asm": "shufps $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "470fc67cac2003"
+    },
+    {
+      "asm": "shufpd $3, %xmm2, %xmm1",
+      "hex": "660fc6ca03"
+    },
+    {
+      "asm": "shufpd $3, 16(%rax), %xmm1",
+      "hex": "660fc6481003"
+    },
+    {
+      "asm": "shufpd $3, %xmm10, %xmm9",
+      "hex": "66450fc6ca03"
+    },
+    {
+      "asm": "shufpd $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "66470fc67cac2003"
+    },
+    {
+      "asm": "pshufd $3, %xmm2, %xmm1",
+      "hex": "660f70ca03"
+    },
+    {
+      "asm": "pshufd $3, 16(%rax), %xmm1",
+      "hex": "660f70481003"
+    },
+    {
+      "asm": "pshufd $3, %xmm10, %xmm9",
+      "hex": "66450f70ca03"
+    },
+    {
+      "asm": "pshufd $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "66470f707cac2003"
+    },
+    {
+      "asm": "pshuflw $3, %xmm2, %xmm1",
+      "hex": "f20f70ca03"
+    },
+    {
+      "asm": "pshuflw $3, 16(%rax), %xmm1",
+      "hex": "f20f70481003"
+    },
+    {
+      "asm": "pshuflw $3, %xmm10, %xmm9",
+      "hex": "f2450f70ca03"
+    },
+    {
+      "asm": "pshuflw $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "f2470f707cac2003"
+    },
+    {
+      "asm": "pshufhw $3, %xmm2, %xmm1",
+      "hex": "f30f70ca03"
+    },
+    {
+      "asm": "pshufhw $3, 16(%rax), %xmm1",
+      "hex": "f30f70481003"
+    },
+    {
+      "asm": "pshufhw $3, %xmm10, %xmm9",
+      "hex": "f3450f70ca03"
+    },
+    {
+      "asm": "pshufhw $3, 32(%r12,%r13,4), %xmm15",
+      "hex": "f3470f707cac2003"
+    },
+    {
+      "asm": "cvtsi2ss %ecx, %xmm2",
+      "hex": "f30f2ad1"
+    },
+    {
+      "asm": "cvtsi2ssl 16(%rax), %xmm2",
+      "hex": "f30f2a5010"
+    },
+    {
+      "asm": "cvtss2si %xmm2, %ecx",
+      "hex": "f30f2dca"
+    },
+    {
+      "asm": "cvtss2sil 16(%rax), %ecx",
+      "hex": "f30f2d4810"
+    },
+    {
+      "asm": "cvttss2si %xmm2, %ecx",
+      "hex": "f30f2cca"
+    },
+    {
+      "asm": "cvttss2sil 16(%rax), %ecx",
+      "hex": "f30f2c4810"
+    },
+    {
+      "asm": "cvtsi2ss %r9, %xmm10",
+      "hex": "f34d0f2ad1"
+    },
+    {
+      "asm": "cvtsi2ssq 16(%rax), %xmm10",
+      "hex": "f34c0f2a5010"
+    },
+    {
+      "asm": "cvtss2si %xmm10, %r9",
+      "hex": "f34d0f2dca"
+    },
+    {
+      "asm": "cvtss2siq 16(%rax), %r9",
+      "hex": "f34c0f2d4810"
+    },
+    {
+      "asm": "cvttss2si %xmm10, %r9",
+      "hex": "f34d0f2cca"
+    },
+    {
+      "asm": "cvttss2siq 16(%rax), %r9",
+      "hex": "f34c0f2c4810"
+    },
+    {
+      "asm": "cvtsi2sd %ecx, %xmm2",
+      "hex": "f20f2ad1"
+    },
+    {
+      "asm": "cvtsi2sdl 16(%rax), %xmm2",
+      "hex": "f20f2a5010"
+    },
+    {
+      "asm": "cvtsd2si %xmm2, %ecx",
+      "hex": "f20f2dca"
+    },
+    {
+      "asm": "cvtsd2sil 16(%rax), %ecx",
+      "hex": "f20f2d4810"
+    },
+    {
+      "asm": "cvttsd2si %xmm2, %ecx",
+      "hex": "f20f2cca"
+    },
+    {
+      "asm": "cvttsd2sil 16(%rax), %ecx",
+      "hex": "f20f2c4810"
+    },
+    {
+      "asm": "cvtsi2sd %r9, %xmm10",
+      "hex": "f24d0f2ad1"
+    },
+    {
+      "asm": "cvtsi2sdq 16(%rax), %xmm10",
+      "hex": "f24c0f2a5010"
+    },
+    {
+      "asm": "cvtsd2si %xmm10, %r9",
+      "hex": "f24d0f2dca"
+    },
+    {
+      "asm": "cvtsd2siq 16(%rax), %r9",
+      "hex": "f24c0f2d4810"
+    },
+    {
+      "asm": "cvttsd2si %xmm10, %r9",
+      "hex": "f24d0f2cca"
+    },
+    {
+      "asm": "cvttsd2siq 16(%rax), %r9",
+      "hex": "f24c0f2c4810"
+    },
+    {
+      "asm": "pavgb %mm2, %mm1",
+      "hex": "0fe0ca"
+    },
+    {
+      "asm": "pavgb 16(%rax), %mm1",
+      "hex": "0fe04810"
+    },
+    {
+      "asm": "pavgw %mm2, %mm1",
+      "hex": "0fe3ca"
+    },
+    {
+      "asm": "pavgw 16(%rax), %mm1",
+      "hex": "0fe34810"
+    },
+    {
+      "asm": "pmaxsw %mm2, %mm1",
+      "hex": "0feeca"
+    },
+    {
+      "asm": "pmaxsw 16(%rax), %mm1",
+      "hex": "0fee4810"
+    },
+    {
+      "asm": "pmaxub %mm2, %mm1",
+      "hex": "0fdeca"
+    },
+    {
+      "asm": "pmaxub 16(%rax), %mm1",
+      "hex": "0fde4810"
+    },
+    {
+      "asm": "pminsw %mm2, %mm1",
+      "hex": "0feaca"
+    },
+    {
+      "asm": "pminsw 16(%rax), %mm1",
+      "hex": "0fea4810"
+    },
+    {
+      "asm": "pminub %mm2, %mm1",
+      "hex": "0fdaca"
+    },
+    {
+      "asm": "pminub 16(%rax), %mm1",
+      "hex": "0fda4810"
+    },
+    {
+      "asm": "pmulhuw %mm2, %mm1",
+      "hex": "0fe4ca"
+    },
+    {
+      "asm": "pmulhuw 16(%rax), %mm1",
+      "hex": "0fe44810"
+    },
+    {
+      "asm": "psadbw %mm2, %mm1",
+      "hex": "0ff6ca"
+    },
+    {
+      "asm": "psadbw 16(%rax), %mm1",
+      "hex": "0ff64810"
+    },
+    {
+      "asm": "paddq %mm2, %mm1",
+      "hex": "0fd4ca"
+    },
+    {
+      "asm": "paddq 16(%rax), %mm1",
+      "hex": "0fd44810"
+    },
+    {
+      "asm": "psubq %mm2, %mm1",
+      "hex": "0ffbca"
+    },
+    {
+      "asm": "psubq 16(%rax), %mm1",
+      "hex": "0ffb4810"
+    },
+    {
+      "asm": "pmuludq %mm2, %mm1",
+      "hex": "0ff4ca"
+    },
+    {
+      "asm": "pmuludq 16(%rax), %mm1",
+      "hex": "0ff44810"
+    },
+    {
+      "asm": "paddb %mm2, %mm1",
+      "hex": "0ffcca"
+    },
+    {
+      "asm": "paddb 16(%rax), %mm1",
+      "hex": "0ffc4810"
+    },
+    {
+      "asm": "paddw %mm2, %mm1",
+      "hex": "0ffdca"
+    },
+    {
+      "asm": "paddw 16(%rax), %mm1",
+      "hex": "0ffd4810"
+    },
+    {
+      "asm": "paddd %mm2, %mm1",
+      "hex": "0ffeca"
+    },
+    {
+      "asm": "paddd 16(%rax), %mm1",
+      "hex": "0ffe4810"
+    },
+    {
+      "asm": "pxor %mm2, %mm1",
+      "hex": "0fefca"
+    },
+    {
+      "asm": "pxor 16(%rax), %mm1",
+      "hex": "0fef4810"
+    },
+    {
+      "asm": "pand %mm2, %mm1",
+      "hex": "0fdbca"
+    },
+    {
+      "asm": "pand 16(%rax), %mm1",
+      "hex": "0fdb4810"
+    },
+    {
+      "asm": "packsswb %mm2, %mm1",
+      "hex": "0f63ca"
+    },
+    {
+      "asm": "packsswb 16(%rax), %mm1",
+      "hex": "0f634810"
+    },
+    {
+      "asm": "psllw $3, %mm1",
+      "hex": "0f71f103"
+    },
+    {
+      "asm": "psllw %mm2, %mm1",
+      "hex": "0ff1ca"
+    },
+    {
+      "asm": "psllw 16(%rax), %mm1",
+      "hex": "0ff14810"
+    },
+    {
+      "asm": "pslld $3, %mm1",
+      "hex": "0f72f103"
+    },
+    {
+      "asm": "pslld %mm2, %mm1",
+      "hex": "0ff2ca"
+    },
+    {
+      "asm": "pslld 16(%rax), %mm1",
+      "hex": "0ff24810"
+    },
+    {
+      "asm": "psllq $3, %mm1",
+      "hex": "0f73f103"
+    },
+    {
+      "asm": "psllq %mm2, %mm1",
+      "hex": "0ff3ca"
+    },
+    {
+      "asm": "psllq 16(%rax), %mm1",
+      "hex": "0ff34810"
+    },
+    {
+      "asm": "psraw $3, %mm1",
+      "hex": "0f71e103"
+    },
+    {
+      "asm": "psraw %mm2, %mm1",
+      "hex": "0fe1ca"
+    },
+    {
+      "asm": "psraw 16(%rax), %mm1",
+      "hex": "0fe14810"
+    },
+    {
+      "asm": "psrad $3, %mm1",
+      "hex": "0f72e103"
+    },
+    {
+      "asm": "psrad %mm2, %mm1",
+      "hex": "0fe2ca"
+    },
+    {
+      "asm": "psrad 16(%rax), %mm1",
+      "hex": "0fe24810"
+    },
+    {
+      "asm": "psrlw $3, %mm1",
+      "hex": "0f71d103"
+    },
+    {
+      "asm": "psrlw %mm2, %mm1",
+      "hex": "0fd1ca"
+    },
+    {
+      "asm": "psrlw 16(%rax), %mm1",
+      "hex": "0fd14810"
+    },
+    {
+      "asm": "psrld $3, %mm1",
+      "hex": "0f72d103"
+    },
+    {
+      "asm": "psrld %mm2, %mm1",
+      "hex": "0fd2ca"
+    },
+    {
+      "asm": "psrld 16(%rax), %mm1",
+      "hex": "0fd24810"
+    },
+    {
+      "asm": "psrlq $3, %mm1",
+      "hex": "0f73d103"
+    },
+    {
+      "asm": "psrlq %mm2, %mm1",
+      "hex": "0fd3ca"
+    },
+    {
+      "asm": "psrlq 16(%rax), %mm1",
+      "hex": "0fd34810"
+    },
+    {
+      "asm": "pinsrw $3, %ecx, %mm1",
+      "hex": "0fc4c903"
+    },
+    {
+      "asm": "pinsrw $3, 16(%rax), %mm1",
+      "hex": "0fc4481003"
+    },
+    {
+      "asm": "pextrw $3, %mm2, %ecx",
+      "hex": "0fc5ca03"
+    },
+    {
+      "asm": "pmovmskb %mm2, %ecx",
+      "hex": "0fd7ca"
+    },
+    {
+      "asm": "movd %ecx, %mm1",
+      "hex": "0f6ec9"
+    },
+    {
+      "asm": "movd %mm1, %ecx",
+      "hex": "0f7ec9"
+    },
+    {
+      "asm": "pavgb %xmm2, %xmm1",
+      "hex": "660fe0ca"
+    },
+    {
+      "asm": "pavgb 16(%rax), %xmm1",
+      "hex": "660fe04810"
+    },
+    {
+      "asm": "pavgw %xmm2, %xmm1",
+      "hex": "660fe3ca"
+    },
+    {
+      "asm": "pavgw 16(%rax), %xmm1",
+      "hex": "660fe34810"
+    },
+    {
+      "asm": "pmaxsw %xmm2, %xmm1",
+      "hex": "660feeca"
+    },
+    {
+      "asm": "pmaxsw 16(%rax), %xmm1",
+      "hex": "660fee4810"
+    },
+    {
+      "asm": "pmaxub %xmm2, %xmm1",
+      "hex": "660fdeca"
+    },
+    {
+      "asm": "pmaxub 16(%rax), %xmm1",
+      "hex": "660fde4810"
+    },
+    {
+      "asm": "pminsw %xmm2, %xmm1",
+      "hex": "660feaca"
+    },
+    {
+      "asm": "pminsw 16(%rax), %xmm1",
+      "hex": "660fea4810"
+    },
+    {
+      "asm": "pminub %xmm2, %xmm1",
+      "hex": "660fdaca"
+    },
+    {
+      "asm": "pminub 16(%rax), %xmm1",
+      "hex": "660fda4810"
+    },
+    {
+      "asm": "pmulhuw %xmm2, %xmm1",
+      "hex": "660fe4ca"
+    },
+    {
+      "asm": "pmulhuw 16(%rax), %xmm1",
+      "hex": "660fe44810"
+    },
+    {
+      "asm": "psadbw %xmm2, %xmm1",
+      "hex": "660ff6ca"
+    },
+    {
+      "asm": "psadbw 16(%rax), %xmm1",
+      "hex": "660ff64810"
+    },
+    {
+      "asm": "paddq %xmm2, %xmm1",
+      "hex": "660fd4ca"
+    },
+    {
+      "asm": "paddq 16(%rax), %xmm1",
+      "hex": "660fd44810"
+    },
+    {
+      "asm": "psubq %xmm2, %xmm1",
+      "hex": "660ffbca"
+    },
+    {
+      "asm": "psubq 16(%rax), %xmm1",
+      "hex": "660ffb4810"
+    },
+    {
+      "asm": "pmuludq %xmm2, %xmm1",
+      "hex": "660ff4ca"
+    },
+    {
+      "asm": "pmuludq 16(%rax), %xmm1",
+      "hex": "660ff44810"
+    },
+    {
+      "asm": "paddb %xmm2, %xmm1",
+      "hex": "660ffcca"
+    },
+    {
+      "asm": "paddb 16(%rax), %xmm1",
+      "hex": "660ffc4810"
+    },
+    {
+      "asm": "paddw %xmm2, %xmm1",
+      "hex": "660ffdca"
+    },
+    {
+      "asm": "paddw 16(%rax), %xmm1",
+      "hex": "660ffd4810"
+    },
+    {
+      "asm": "paddd %xmm2, %xmm1",
+      "hex": "660ffeca"
+    },
+    {
+      "asm": "paddd 16(%rax), %xmm1",
+      "hex": "660ffe4810"
+    },
+    {
+      "asm": "pxor %xmm2, %xmm1",
+      "hex": "660fefca"
+    },
+    {
+      "asm": "pxor 16(%rax), %xmm1",
+      "hex": "660fef4810"
+    },
+    {
+      "asm": "pand %xmm2, %xmm1",
+      "hex": "660fdbca"
+    },
+    {
+      "asm": "pand 16(%rax), %xmm1",
+      "hex": "660fdb4810"
+    },
+    {
+      "asm": "packsswb %xmm2, %xmm1",
+      "hex": "660f63ca"
+    },
+    {
+      "asm": "packsswb 16(%rax), %xmm1",
+      "hex": "660f634810"
+    },
+    {
+      "asm": "psllw $3, %xmm1",
+      "hex": "660f71f103"
+    },
+    {
+      "asm": "psllw %xmm2, %xmm1",
+      "hex": "660ff1ca"
+    },
+    {
+      "asm": "psllw 16(%rax), %xmm1",
+      "hex": "660ff14810"
+    },
+    {
+      "asm": "pslld $3, %xmm1",
+      "hex": "660f72f103"
+    },
+    {
+      "asm": "pslld %xmm2, %xmm1",
+      "hex": "660ff2ca"
+    },
+    {
+      "asm": "pslld 16(%rax), %xmm1",
+      "hex": "660ff24810"
+    },
+    {
+      "asm": "psllq $3, %xmm1",
+      "hex": "660f73f103"
+    },
+    {
+      "asm": "psllq %xmm2, %xmm1",
+      "hex": "660ff3ca"
+    },
+    {
+      "asm": "psllq 16(%rax), %xmm1",
+      "hex": "660ff34810"
+    },
+    {
+      "asm": "psraw $3, %xmm1",
+      "hex": "660f71e103"
+    },
+    {
+      "asm": "psraw %xmm2, %xmm1",
+      "hex": "660fe1ca"
+    },
+    {
+      "asm": "psraw 16(%rax), %xmm1",
+      "hex": "660fe14810"
+    },
+    {
+      "asm": "psrad $3, %xmm1",
+      "hex": "660f72e103"
+    },
+    {
+      "asm": "psrad %xmm2, %xmm1",
+      "hex": "660fe2ca"
+    },
+    {
+      "asm": "psrad 16(%rax), %xmm1",
+      "hex": "660fe24810"
+    },
+    {
+      "asm": "psrlw $3, %xmm1",
+      "hex": "660f71d103"
+    },
+    {
+      "asm": "psrlw %xmm2, %xmm1",
+      "hex": "660fd1ca"
+    },
+    {
+      "asm": "psrlw 16(%rax), %xmm1",
+      "hex": "660fd14810"
+    },
+    {
+      "asm": "psrld $3, %xmm1",
+      "hex": "660f72d103"
+    },
+    {
+      "asm": "psrld %xmm2, %xmm1",
+      "hex": "660fd2ca"
+    },
+    {
+      "asm": "psrld 16(%rax), %xmm1",
+      "hex": "660fd24810"
+    },
+    {
+      "asm": "psrlq $3, %xmm1",
+      "hex": "660f73d103"
+    },
+    {
+      "asm": "psrlq %xmm2, %xmm1",
+      "hex": "660fd3ca"
+    },
+    {
+      "asm": "psrlq 16(%rax), %xmm1",
+      "hex": "660fd34810"
+    },
+    {
+      "asm": "pinsrw $3, %ecx, %xmm1",
+      "hex": "660fc4c903"
+    },
+    {
+      "asm": "pinsrw $3, 16(%rax), %xmm1",
+      "hex": "660fc4481003"
+    },
+    {
+      "asm": "pextrw $3, %xmm2, %ecx",
+      "hex": "660fc5ca03"
+    },
+    {
+      "asm": "pmovmskb %xmm2, %ecx",
+      "hex": "660fd7ca"
+    },
+    {
+      "asm": "movd %ecx, %xmm1",
+      "hex": "660f6ec9"
+    },
+    {
+      "asm": "movd %xmm1, %ecx",
+      "hex": "660f7ec9"
+    },
+    {
+      "asm": "psrldq $3, %xmm1",
+      "hex": "660f73d903"
+    },
+    {
+      "asm": "psrldq $255, %xmm15",
+      "hex": "66410f73dfff"
+    },
+    {
+      "asm": "pslldq $3, %xmm1",
+      "hex": "660f73f903"
+    },
+    {
+      "asm": "pslldq $255, %xmm15",
+      "hex": "66410f73ffff"
+    },
+    {
+      "asm": "pshufw $27, %mm2, %mm1",
+      "hex": "0f70ca1b"
+    },
+    {
+      "asm": "pshufw $27, 16(%rax), %mm1",
+      "hex": "0f7048101b"
+    },
+    {
+      "asm": "cvtpi2ps %mm2, %xmm1",
+      "hex": "0f2aca"
+    },
+    {
+      "asm": "cvtpi2ps 16(%rax), %xmm1",
+      "hex": "0f2a4810"
+    },
+    {
+      "asm": "cvtps2pi %xmm2, %mm1",
+      "hex": "0f2dca"
+    },
+    {
+      "asm": "cvtps2pi 16(%rax), %mm1",
+      "hex": "0f2d4810"
+    },
+    {
+      "asm": "cvttps2pi %xmm2, %mm1",
+      "hex": "0f2cca"
+    },
+    {
+      "asm": "cvttps2pi 16(%rax), %mm1",
+      "hex": "0f2c4810"
+    },
+    {
+      "asm": "movmskps %xmm2, %ecx",
+      "hex": "0f50ca"
+    },
+    {
+      "asm": "cvtpi2pd %mm2, %xmm1",
+      "hex": "660f2aca"
+    },
+    {
+      "asm": "cvtpi2pd 16(%rax), %xmm1",
+      "hex": "660f2a4810"
+    },
+    {
+      "asm": "cvtpd2pi %xmm2, %mm1",
+      "hex": "660f2dca"
+    },
+    {
+      "asm": "cvtpd2pi 16(%rax), %mm1",
+      "hex": "660f2d4810"
+    },
+    {
+      "asm": "cvttpd2pi %xmm2, %mm1",
+      "hex": "660f2cca"
+    },
+    {
+      "asm": "cvttpd2pi 16(%rax), %mm1",
+      "hex": "660f2c4810"
+    },
+    {
+      "asm": "movmskpd %xmm2, %ecx",
+      "hex": "660f50ca"
+    },
+    {
+      "asm": "movq2dq %mm2, %xmm1",
+      "hex": "f30fd6ca"
+    },
+    {
+      "asm": "movdq2q %xmm2, %mm1",
+      "hex": "f20fd6ca"
+    },
+    {
+      "asm": "movntps %xmm1, 16(%rax)",
+      "hex": "0f2b4810"
+    },
+    {
+      "asm": "movntpd %xmm1, 16(%rax)",
+      "hex": "660f2b4810"
+    },
+    {
+      "asm": "movntdq %xmm1, 16(%rax)",
+      "hex": "660fe74810"
+    },
+    {
+      "asm": "movntq %mm1, 16(%rax)",
+      "hex": "0fe74810"
+    },
+    {
+      "asm": "movnti %ecx, 16(%rax)",
+      "hex": "0fc34810"
+    },
+    {
+      "asm": "movntil %ecx, 16(%rax)",
+      "hex": "0fc34810"
+    },
+    {
+      "asm": "movnti %r9, 16(%rax)",
+      "hex": "4c0fc34810"
+    },
+    {
+      "asm": "movntiq %r9, 16(%rax)",
+      "hex": "4c0fc34810"
+    },
+    {
+      "asm": "movmskpd %xmm15, %r9d",
+      "hex": "66450f50cf"
+    },
+    {
+      "asm": "pextrw $7, %xmm15, %r9d",
+      "hex": "66450fc5cf07"
+    },
+    {
+      "asm": "pinsrw $7, %r9d, %xmm15",
+      "hex": "66450fc4f907"
+    },
+    {
+      "asm": "pmovmskb %xmm15, %r9d",
+      "hex": "66450fd7cf"
+    },
+    {
+      "asm": "movd %r9d, %xmm15",
+      "hex": "66450f6ef9"
+    },
+    {
+      "asm": "movd %xmm15, %r9d",
+      "hex": "66450f7ef9"
+    },
+    {
+      "asm": "movq %r9, %xmm15",
+      "hex": "664d0f6ef9"
+    },
+    {
+      "asm": "movq %xmm15, %r9",
+      "hex": "664d0f7ef9"
+    },
+    {
+      "asm": "ldmxcsr 16(%rax)",
+      "hex": "0fae5010"
+    },
+    {
+      "asm": "stmxcsr 16(%rax)",
+      "hex": "0fae5810"
+    },
+    {
+      "asm": "prefetchnta 16(%rax)",
+      "hex": "0f184010"
+    },
+    {
+      "asm": "prefetcht0 16(%rax)",
+      "hex": "0f184810"
+    },
+    {
+      "asm": "prefetcht1 16(%rax)",
+      "hex": "0f185010"
+    },
+    {
+      "asm": "prefetcht2 16(%rax)",
+      "hex": "0f185810"
+    },
+    {
+      "asm": "clflush 16(%rax)",
+      "hex": "0fae7810"
+    },
+    {
+      "asm": "lfence",
+      "hex": "0faee8"
+    },
+    {
+      "asm": "mfence",
+      "hex": "0faef0"
+    },
+    {
+      "asm": "sfence",
+      "hex": "0faef8"
+    }
+  ]
+}

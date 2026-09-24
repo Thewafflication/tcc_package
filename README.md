@@ -66,6 +66,9 @@ wpm trust add wpm-release.public
 
 ## Build
 
+SSE/SSE2 C types, intrinsic headers, ABI support, assembler coverage and
+validation commands are documented in [SIMD support](docs/simd-support.md).
+
 ```powershell
 cmake --preset x86-release
 cmake --build --preset x86-release

@@ -200,6 +200,35 @@ if(BUILD_TESTING)
     LABELS "cx02;TCC-CX-TC-1008"
     REQUIRED_FILES "${_package_dir}/tcc.exe"
   )
+  # Every package contains both named x86 compilers. Test their output even
+  # when the package's default compiler targets ARM64.
+  foreach(_simd_arch IN ITEMS x86 x64)
+    if(_simd_arch STREQUAL "x86")
+      set(_simd_compiler "${_package_dir}/i386-win32-tcc.exe")
+    else()
+      set(_simd_compiler "${_package_dir}/x86_64-win32-tcc.exe")
+    endif()
+    add_test(
+      NAME "tcc-simd-${_simd_arch}"
+      COMMAND "${POWERSHELL_EXECUTABLE}" -NoProfile
+        -File "${CMAKE_CURRENT_SOURCE_DIR}/tests/simd/run-simd.ps1"
+        -Compiler "${_simd_compiler}" -TargetArchitecture "${_simd_arch}"
+    )
+    set_tests_properties("tcc-simd-${_simd_arch}" PROPERTIES
+      LABELS "simd;sse;sse2"
+      REQUIRED_FILES "${_simd_compiler}"
+    )
+    add_test(
+      NAME "tcc-simd-abi-${_simd_arch}"
+      COMMAND "${POWERSHELL_EXECUTABLE}" -NoProfile
+        -File "${CMAKE_CURRENT_SOURCE_DIR}/tests/simd/run-abi.ps1"
+        -Compiler "${_simd_compiler}" -TargetArchitecture "${_simd_arch}"
+    )
+    set_tests_properties("tcc-simd-abi-${_simd_arch}" PROPERTIES
+      LABELS "simd;sse;sse2;abi"
+      REQUIRED_FILES "${_simd_compiler}"
+    )
+  endforeach()
 endif()
 
 if(NOT WPM_EXECUTABLE)
