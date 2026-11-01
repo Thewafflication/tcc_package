@@ -5,6 +5,10 @@
 /CMakeUserPresets.json
 /install_manifest.txt
 
+# Test artifacts
+/pytest.ini
+/Testing/
+
 # Visual Studio and editors
 /.vs/
 /.vscode/
